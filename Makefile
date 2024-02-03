@@ -1,9 +1,14 @@
 NAME = corekit.a
 CC = cc
-CFLAGS = -Wall -Wextra -Werror $(CEXTRAFLAGS)
+CFLAGS = -Wall -Wextra -Werror
 COMPILE = $(CC) $(CFLAGS)
 ARCHIVE = ar rc $(NAME)
-RM = rm -f
+REMOVE = rm -f
+
+GREEN=\033[0;32m
+RED=\033[0;31m
+BLUE=\033[0;34m
+RESET=\033[0m
 
 SRC = ./src/char/ft_tolower.c \
 	./src/char/ft_toupper.c \
@@ -33,26 +38,20 @@ all: $(NAME)
 
 %.o: %.c
 	@$(COMPILE) -c $< -Iincludes -o $@
-	@echo "$(BLUE)[LIBFTX]:\t$< COMPILED!"
+#	@echo "$(BLUE)[COREKIT]:\t$< COMPILED! $(RESET)"
 
 $(NAME): $(OBJ)
 	@$(ARCHIVE) $(OBJ)
-	@echo "$(GREEN)[LIBFTX]:\tLIBRARY CREATED$(R)"
+	@echo "$(GREEN)[COREKIT]: \tIBRARY CREATED$(RESET)"
 
 clean:
-	@$(RM) $(OBJ)
-	@echo "$(RED)[LIBFTX]:\tOBJECTS DELETED$(R)"
+	@$(REMOVE) $(OBJ)
+	@echo "$(RED)[COREKIT]: \tOBJECTS DELETED$(RESET)"
 
 fclean: clean
-	@$(RM) $(NAME)
-	@echo "$(RED)[LIBFTX]:\tLIBRARY DELETED$(R)"
+	@$(REMOVE) $(NAME)
+	@echo "$(RED)[COREKIT]: \tLIBRARY DELETED$(RESET)"
 
 re: fclean all
-
-# COLORS
-GREEN=\033[0;32m
-RED=\033[0;31m
-BLUE=\033[0;34m
-R=\033[0m
 
 .PHONY: all clean fclean re
