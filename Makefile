@@ -43,6 +43,31 @@ SRC = ./src/char/ft_tolower.c \
 	./src/memory/ft_memcpy.c \
 	./src/memory/ft_memmove.c \
 	./src/memory/ft_memset.c \
+	./src/string/ft_split.c \
+	./src/string/ft_strchr.c \
+	./src/string/ft_strdup.c \
+	./src/string/ft_striteri.c \
+	./src/string/ft_strjoin.c \
+	./src/string/ft_strlcat.c \
+	./src/string/ft_strlcpy.c \
+	./src/string/ft_strlen.c \
+	./src/string/ft_strmapi.c \
+	./src/string/ft_strncmp.c \
+	./src/string/ft_strnstr.c \
+	./src/string/ft_strrchr.c \
+	./src/string/ft_strtolower.c \
+	./src/string/ft_strtoupper.c \
+	./src/string/ft_strtrim.c \
+	./src/string/ft_substr.c \
+	./src/output/ft_putchar_fd.c \
+	./src/output/ft_putendl_fd.c \
+	./src/output/ft_putnbr_fd.c \
+	./src/output/ft_putstr_fd.c \
+	./src/types/ft_isalnum.c \
+	./src/types/ft_isalpha.c \
+	./src/types/ft_isascii.c \
+	./src/types/ft_isdigit.c \
+	./src/types/ft_isprint.c \
 
 OBJ = ${SRC:.c=.o} ${SRC_PRINTF:.c=.o} ${SRC_GET_NEXT_LINE:.c=.o}
 

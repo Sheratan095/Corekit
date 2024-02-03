@@ -13,8 +13,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
-# include <stdlib.h>
+# include "corekit.h"
 
 typedef struct s_list
 {
@@ -44,7 +43,7 @@ void			*ft_memmove(void *dest, const void *src, size_t count);
 
 size_t			ft_strlcpy(char *dest, const char *src, size_t size);
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size);
 
 int				ft_toupper(int c);
 
