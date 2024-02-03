@@ -42,15 +42,15 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(ARCHIVE) $(OBJ)
-	@echo "$(GREEN)[COREKIT]: \tIBRARY CREATED$(RESET)"
+	@echo "$(GREEN)[COREKIT]: \t LIBRARY CREATED$(RESET)"
 
 clean:
 	@$(REMOVE) $(OBJ)
-	@echo "$(RED)[COREKIT]: \tOBJECTS DELETED$(RESET)"
+	@echo "$(RED)[COREKIT]: \t OBJECTS DELETED$(RESET)"
 
 fclean: clean
 	@$(REMOVE) $(NAME)
-	@echo "$(RED)[COREKIT]: \tLIBRARY DELETED$(RESET)"
+	@echo "$(RED)[COREKIT]: \t LIBRARY DELETED$(RESET)"
 
 re: fclean all
 
