@@ -10,6 +10,18 @@ RED=\033[0;31m
 BLUE=\033[0;34m
 RESET=\033[0m
 
+SRC_PRINTF = ./src/ft_printf/ft_is_in.c \
+			./src/ft_printf/ft_printf.c \
+			./src/ft_printf/ft_putbase.c \
+			./src/ft_printf/ft_putchar.c \
+			./src/ft_printf/ft_putnbr.c \
+			./src/ft_printf/ft_putptr.c \
+			./src/ft_printf/ft_putstr.c \
+			./src/ft_printf/ft_unsignedputnbr.c
+
+SRC_GET_NEXT_LINE = ./src/get_next_line/get_next_line_utils_bonus.c \
+				./src/get_next_line/get_next_line_bonus.c
+
 SRC = ./src/char/ft_tolower.c \
 	./src/char/ft_toupper.c \
 	./src/conversions/ft_atoi.c \
@@ -30,9 +42,9 @@ SRC = ./src/char/ft_tolower.c \
 	./src/memory/ft_memcmp.c \
 	./src/memory/ft_memcpy.c \
 	./src/memory/ft_memmove.c \
-	./src/memory/ft_memset.c
+	./src/memory/ft_memset.c \
 
-OBJ = ${SRC:.c=.o}
+OBJ = ${SRC:.c=.o} ${SRC_PRINTF:.c=.o} ${SRC_GET_NEXT_LINE:.c=.o}
 
 all: $(NAME)
 
