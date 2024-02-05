@@ -19,7 +19,7 @@ char	**ft_duplicate_char_matrix(char **matrix)
 	char	**result;
 	int		i;
 
-	count_rows = ft_count_matrix_row(matrix);
+	count_rows = ft_count_matrix_row((void **)matrix);
 	result = malloc(sizeof(char *) * (count_rows + 1));
 	if (!result)
 		return (NULL);
