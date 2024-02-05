@@ -19,13 +19,19 @@
 # include <limits.h>
 
 # include "libft.h"
-# include "get_next_line_bonus.h"
-# include "ft_printf.h"
+//Not including ft_printf.h and get_next_line.h because i don't want to
+//	inlcude also their help functions, so i just use their prototype
 
 typedef enum e_bool
 {
 	false,
 	true
 }	t_bool;
+
+int		ft_printf(const char *format, ...);
+
+char	*get_next_line(int fd, int last_call);
+
+char	*ft_strjoin_free_s1(char *s1, char *s2);
 
 #endif

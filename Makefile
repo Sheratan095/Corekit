@@ -1,4 +1,4 @@
-NAME = corekit.a
+NAME = libcorekit.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 COMPILE = $(CC) $(CFLAGS)
@@ -19,8 +19,8 @@ SRC_PRINTF = ./src/ft_printf/ft_is_in.c \
 			./src/ft_printf/ft_putstr.c \
 			./src/ft_printf/ft_unsignedputnbr.c
 
-SRC_GET_NEXT_LINE = ./src/get_next_line/get_next_line_utils_bonus.c \
-				./src/get_next_line/get_next_line_bonus.c
+SRC_GET_NEXT_LINE = ./src/get_next_line/get_next_line_bonus.c \
+				./src/get_next_line/get_next_line_utils_bonus.c
 
 SRC = ./src/char/ft_tolower.c \
 	./src/char/ft_toupper.c \
@@ -48,6 +48,7 @@ SRC = ./src/char/ft_tolower.c \
 	./src/string/ft_strdup.c \
 	./src/string/ft_striteri.c \
 	./src/string/ft_strjoin.c \
+	./src/string/ft_strjoin_free_s1.c \
 	./src/string/ft_strlcat.c \
 	./src/string/ft_strlcpy.c \
 	./src/string/ft_strlen.c \

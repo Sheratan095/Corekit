@@ -13,10 +13,11 @@
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
-# include "corekit.h"
+# include <stdlib.h>
+# include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 2
 # endif
 
 //massimo numero di file che possono essere gestiti
@@ -24,10 +25,14 @@
 #  define OPEN_MAX 2048
 # endif
 
-char	*get_next_line(int fd);
-
-char	*ft_strjoin_free_s1(char *s1, char *s2);
+char	*get_next_line(int fd, int last_call);
 
 char	*ft_get_line(char *left_str);
+
+char	*ft_strchr_gnl(char *s, int c);
+
+char	*ft_strjoin_free_s1_gnl(char *s1, char *s2);
+
+size_t	ft_strlen_gnl(char *s);
 
 #endif

@@ -1,7 +1,38 @@
-Usage:
+USAGE:
+
+	Path of corekit folder
+	COREKIT_PATH = ./corekit
+
+	Path of corekit includes folder
+	INCLUDES = -I$(COREKIT_PATH)/includes
+
+	%.o: %.c
+		cc $(INCLUDES) -c $< -o $@
+
+	$(NAME): $(OBJ)
+		$(MAKE) -C $(COREKIT_PATH)
+		cc $(INCLUDES) $(OBJ) -L$(COREKIT_PATH) -lcorekit -o $(NAME)
 
 
-Make file explanation:
+In this example the project structure is:
+
+Test
+	corekit
+		includes
+		src
+		Makefile
+		.gitingore
+		README.md
+	main.c
+	makefile
+
+
+
+MAKE FILE EXPLANATION:
+
+
+The library (.a file) is called libcorekit.a beacause all the library during compilation must start with 'lib' suffix
+
 
 \t is just a tab
 

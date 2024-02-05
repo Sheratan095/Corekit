@@ -17,14 +17,17 @@ char	*format_result(char *reminder);
 char	*format_new_reminder(char *reminder);
 
 // Legge e aggiunge alla stringa main finchè non viene letto uno
+// Se last_call == 1 -> libera variabile statica
 //		'\n' oppure il file è finito
 // Estrae la stringa risultante da quella main(reminder)
 // Area il nuove reminder eliminando la linea appena eliminata, (substring?)
-char	*get_next_line(int fd)
+char	*get_next_line(int fd, int last_call)
 {
 	static char	*reminder[OPEN_MAX];
 	char		*output;
 
+	if (last_call == 1)
+		return (free(reminder[fd]), NULL);
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
 	reminder[fd] = read_line(fd, reminder[fd]);
@@ -52,7 +55,7 @@ char	*read_line(int fd, char *reminder)
 	if (!buffer)
 		return (NULL);
 	read_bytes = 1;
-	while (!ft_strchr(reminder, '\n') && read_bytes != 0)
+	while (!ft_strchr_gnl(reminder, '\n') && read_bytes != 0)
 	{
 		read_bytes = read(fd, buffer, BUFFER_SIZE);
 		if (read_bytes < 0)
@@ -62,7 +65,7 @@ char	*read_line(int fd, char *reminder)
 			return (NULL);
 		}
 		buffer[read_bytes] = '\0';
-		reminder = ft_strjoin_free_s1(reminder, buffer);
+		reminder = ft_strjoin_free_s1_gnl(reminder, buffer);
 		if (!reminder)
 			return (free(buffer), NULL);
 	}
@@ -122,7 +125,7 @@ char	*format_new_reminder(char *reminder)
 		free(reminder);
 		return (NULL);
 	}
-	new_reminder = (char *)malloc(sizeof(char) * (ft_strlen(reminder) - i + 1));
+	new_reminder = (char *)malloc(sizeof(char) * (ft_strlen_gnl(reminder) - i + 1));
 	if (!new_reminder)
 		return (NULL);
 	i++;
