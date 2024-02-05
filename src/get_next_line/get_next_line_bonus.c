@@ -125,7 +125,7 @@ char	*format_new_reminder(char *reminder)
 		free(reminder);
 		return (NULL);
 	}
-	new_reminder = (char *)malloc(sizeof(char) * (ft_strlen_gnl(reminder) - i + 1));
+	new_reminder = (char *)malloc(sizeof(char) * (ft_sl_gnl(reminder) - i + 1));
 	if (!new_reminder)
 		return (NULL);
 	i++;

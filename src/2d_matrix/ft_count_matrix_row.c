@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtolower.c                                    :+:      :+:    :+:   */
+/*   FT_count_matrix_row.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odudniak <odudniak@student.42firenze.it    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 14:52:19 by odudniak          #+#    #+#             */
-/*   Updated: 2024/01/03 13:37:36 by odudniak         ###   ########.fr       */
+/*   Created: 2024/02/05 19:08:31 by marvin            #+#    #+#             */
+/*   Updated: 2024/02/05 19:08:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "corekit.h"
 
-char	*ft_strtolower(char *s)
+size_t	ft_count_matrix_row(char **matrix)
 {
-	int		i;
+	size_t	i;
 
-	i = -1;
-	if (!s)
-		return (s);
-	while (s[++i])
-		s[i] = ft_tolower(s[i]);
-	return (s);
+	i = 0;
+	while (matrix[i])
+		i++;
+	return (i);
 }

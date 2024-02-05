@@ -26,7 +26,6 @@ SRC = ./src/char/ft_tolower.c \
 	./src/list/ft_lstsize.c \
 	./src/memory/ft_bzero.c \
 	./src/memory/ft_calloc.c \
-	./src/memory/ft_free_matrix.c \
 	./src/memory/ft_memchr.c \
 	./src/memory/ft_memcmp.c \
 	./src/memory/ft_memcpy.c \
@@ -58,6 +57,11 @@ SRC = ./src/char/ft_tolower.c \
 	./src/types/ft_isascii.c \
 	./src/types/ft_isdigit.c \
 	./src/types/ft_isprint.c \
+	./src/2d_matrix/ft_count_matrix_row.c \
+	./src/2d_matrix/ft_duplicate_char_matrix.c \
+	./src/2d_matrix/ft_print_char_matrix.c \
+	./src/2d_matrix/ft_free_matrix.c \
+
 
 SRC_PRINTF = ./src/ft_printf/ft_is_in.c \
 			./src/ft_printf/ft_printf.c \
