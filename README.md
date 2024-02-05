@@ -16,23 +16,23 @@ USAGE:
 
 In this example the project structure is:
 
-test
+	test
 
-	corekit↓
+		corekit↓
 
-		includes↓
+			includes↓
 
-		src↓
+			src↓
 
-		Makefile↓
+			Makefile↓
 
-		gitingore
+			gitingore
 
-		README.md
+			README.md
 
-	main.c
+		main.c
 
-	makefile
+		makefile
 
 
 
