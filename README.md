@@ -16,7 +16,7 @@ USAGE:
 
 In this example the project structure is:
 
-Test
+test
 
 	corekit↓
 
