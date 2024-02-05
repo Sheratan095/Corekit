@@ -1,6 +1,3 @@
-- [Usage](#usage)
-- [Makefile explanation](#makefile-explanation)
-
 # Usage
 
 ``` makefile
@@ -62,3 +59,7 @@ Last row is to display every c file that is compiled and turned in .o file (comm
 	%.o: %.c
 		@$(COMPILE) -c $< -Iincludes -o $@
 		@echo "$(BLUE)[LIBFTX]:\t$< COMPILED!"
+
+
+- [Usage](#usage)
+- [Makefile explanation](#makefile-explanation)
