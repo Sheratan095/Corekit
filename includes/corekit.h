@@ -34,12 +34,12 @@ char	*get_next_line(int fd, int last_call);
 
 char	*ft_strjoin_free_s1(char *s1, char *s2);
 
-size_t	ft_count_matrix_row(char **matrix);
+size_t	ft_count_matrix_row(void **matrix);
 
 char	**ft_duplicate_char_matrix(char **matrix);
 
 void	ft_print_char_matrix(char **matrix);
 
-void	ft_free_matrix(void **matrix);
+void	ft_free_matrix(char **matrix);
 
 #endif
