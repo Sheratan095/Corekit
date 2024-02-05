@@ -40,4 +40,6 @@ char	**ft_duplicate_char_matrix(char **matrix);
 
 void	ft_print_char_matrix(char **matrix);
 
+void	*ft_free_matrix(void *mtx, size_t rows);
+
 #endif

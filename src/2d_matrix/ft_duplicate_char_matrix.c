@@ -12,7 +12,7 @@
 
 #include "corekit.h"
 
-char	**ftduplicate_char_matrix(char **matrix)
+char	**ft_duplicate_char_matrix(char **matrix)
 {
 	int		count_rows;
 	int		str_len;
