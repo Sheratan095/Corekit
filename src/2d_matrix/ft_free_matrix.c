@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_free_matrix(char **matrix)
+void	ft_free_matrix(void **matrix)
 {
 	int	i;
 
