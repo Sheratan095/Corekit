@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-void	*ft_free_matrix(void *mtx, size_t rows)
+void	ft_free_matrix(void **matrix)
 {
-	unsigned char	**mtxp;
-	size_t			i;
+	int	i;
 
-	if (!mtx)
-		return (NULL);
+	if (!matrix)
+		return ;
 	i = 0;
-	mtxp = (unsigned char **) mtx;
-	while (i < rows)
-		free(mtxp[i++]);
-	free(mtxp);
-	return (NULL);
+	while (matrix[i])
+	{
+		free(matrix[i]);
+		i++;
+	}
+	free(matrix);
 }
