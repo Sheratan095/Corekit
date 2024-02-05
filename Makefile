@@ -10,33 +10,6 @@ RED=\033[0;31m
 BLUE=\033[0;34m
 RESET=\033[0m
 
-OBJ = ${SRC:.c=.o} ${SRC_PRINTF:.c=.o} ${SRC_GET_NEXT_LINE:.c=.o}
-
-%.o: %.c
-	@$(COMPILE) -c $< -Iincludes -o $@
-#	@echo "$(BLUE)[COREKIT]:\t$< COMPILED! $(RESET)"
-
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	@$(ARCHIVE) $(OBJ)
-	@echo "$(GREEN)[COREKIT]: \t LIBRARY CREATED$(RESET)"
-
-clean:
-	@$(REMOVE) $(OBJ)
-	@echo "$(RED)[COREKIT]: \t OBJECTS DELETED$(RESET)"
-
-fclean: clean
-	@$(REMOVE) $(NAME)
-	@echo "$(RED)[COREKIT]: \t LIBRARY DELETED$(RESET)"
-
-re: fclean all
-
-.PHONY: all clean fclean re
-
-
-
-#SOURCE FILES
 
 SRC = ./src/char/ft_tolower.c \
 	./src/char/ft_toupper.c \
@@ -97,3 +70,27 @@ SRC_PRINTF = ./src/ft_printf/ft_is_in.c \
 
 SRC_GET_NEXT_LINE = ./src/get_next_line/get_next_line_bonus.c \
 				./src/get_next_line/get_next_line_utils_bonus.c
+
+OBJ = ${SRC:.c=.o} ${SRC_PRINTF:.c=.o} ${SRC_GET_NEXT_LINE:.c=.o}
+
+%.o: %.c
+	@$(COMPILE) -c $< -Iincludes -o $@
+#	@echo "$(BLUE)[COREKIT]:\t$< COMPILED! $(RESET)"
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	@$(ARCHIVE) $(OBJ)
+	@echo "$(GREEN)[COREKIT]: \t LIBRARY CREATED$(RESET)"
+
+clean:
+	@$(REMOVE) $(OBJ)
+	@echo "$(RED)[COREKIT]: \t OBJECTS DELETED$(RESET)"
+
+fclean: clean
+	@$(REMOVE) $(NAME)
+	@echo "$(RED)[COREKIT]: \t LIBRARY DELETED$(RESET)"
+
+re: fclean all
+
+.PHONY: all clean fclean re
