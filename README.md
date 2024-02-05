@@ -1,20 +1,23 @@
-USAGE:
+- [Usage](#usage)
+- [Makefile explanation](#makefile-explanation)
 
-	Path of corekit folder
-	COREKIT_PATH = ./corekit
+# Usage
 
-	Path of corekit includes folder
-	INCLUDES = -I$(COREKIT_PATH)/includes
+``` makefile
+	COREKIT_PATH = ./corekit #path of corekit folder
+
+	INCLUDES = -I$(COREKIT_PATH)/includes #path of includes folder in corekit
 
 	%.o: %.c
 		cc $(INCLUDES) -c $< -o $@
 
 	$(NAME): $(OBJ)
-		$(MAKE) -C $(COREKIT_PATH)
-		cc $(INCLUDES) $(OBJ) -L$(COREKIT_PATH) -lcorekit -o $(NAME)
+		$(MAKE) -C $(COREKIT_PATH) #execute make in corekit folder
+		cc $(INCLUDES) $(OBJ) -L$(COREKIT_PATH) -lcorekit -o $(NAME) #-lcorekit: includes library name (libcorekit)
+```
 
 
-In this example the project structure is:
+_In this example the project structure is:_
 
 	test↓
 
@@ -36,7 +39,7 @@ In this example the project structure is:
 
 
 
-MAKE FILE EXPLANATION:
+# Makefile explanation
 
 
 The library (.a file) is called libcorekit.a beacause all the library during compilation must start with 'lib' suffix
