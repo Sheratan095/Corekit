@@ -18,12 +18,19 @@ In this example the project structure is:
 
 Test
 ---↓corekit
+
 -------↓includes
+
 -------↓src
+
 -------Makefile
+
 -------.gitingore
+
 -------README.md
+
 ----main.c
+
 ----makefile
 
 
