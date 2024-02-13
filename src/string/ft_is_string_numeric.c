@@ -21,6 +21,7 @@ t_bool	ft_is_string_numeric(char *str)
 	{
 		if (ft_isdigit(str[i]) == 0)
 			return (true);
+		i++;
 	}
 	return (false);
 }
