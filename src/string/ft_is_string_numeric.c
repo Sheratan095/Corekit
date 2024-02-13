@@ -20,8 +20,8 @@ t_bool	ft_is_string_numeric(char *str)
 	while (str[i])
 	{
 		if (ft_isdigit(str[i]) == 0)
-			return (true);
+			return (false);
 		i++;
 	}
-	return (false);
+	return (true);
 }
