@@ -36,6 +36,8 @@ char	*get_next_line(int fd, int last_call);
 
 char	*ft_strjoin_free_s1(char *s1, char *s2);
 
+t_bool	ft_is_string_numeric(char *str);
+
 //MATIRX
 
 char	**ft_duplicate_char_matrix(char **matrix);
