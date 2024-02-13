@@ -15,9 +15,13 @@
 
 # include "corekit.h"
 
-//Circular dependency: con't use t_stack because it isn't stiil defined
-//This will result in a compilation error because the compiler
-//	doesn't know what t_stack is at that point.
+/**
+	Struct used for the dubly linked list of int
+
+	Circular dependency: con't use t_stack because it isn't still defined
+			This will result in a compilation error because the compiler
+			doesn't know what t_stack is at that point.
+*/
 typedef struct s_stack
 {
 	int				value;
@@ -25,16 +29,31 @@ typedef struct s_stack
 	struct s_stack	*prev;
 }	t_stack;
 
-//Add new node to the stack and return the new node pointer, so the new top
+/**
+	@brief Add new node to the stack
+	@param stack pointer to stack top element 
+	@param new_value value to assign to the new node
+	@return New top node pointer of the stack
+*/
 t_stack	*ft_push(t_stack *stack, int new_value);
 
-//Remove top element and return th second node pointer, so the new top
+/**
+	@brief Remove top element of the stack
+	@param stack pointer to stack top element 
+	@return New top node pointer of the stack
+*/
 t_stack	*ft_pop(t_stack *stack);
 
-//Print in the termial the stack, starting from top
+/**
+	@brief Print in the termial the stack, starting from top
+	@param stack pointer to stack top element 
+*/
 void	ft_display_stack(t_stack *stack);
 
-//Free the stack
+/**
+	@brief Free the stack
+	@param stack pointer to stack top element 
+*/
 void	ft_free_stack(t_stack *stack);
 
 #endif
