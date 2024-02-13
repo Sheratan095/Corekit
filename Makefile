@@ -61,6 +61,10 @@ SRC = ./src/char/ft_tolower.c \
 	./src/2d_matrix/ft_duplicate_char_matrix.c \
 	./src/2d_matrix/ft_print_char_matrix.c \
 	./src/2d_matrix/ft_free_matrix.c \
+	./src/int_stack/ft_push.c \
+	./src/int_stack/ft_display_stack.c \
+	./src/int_stack/ft_free_stack.c \
+	./src/int_stack/ft_pop.c \
 
 
 SRC_PRINTF = ./src/ft_printf/ft_is_in.c \

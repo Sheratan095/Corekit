@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corekit.h                                          :+:      :+:    :+:   */
+/*   ft_free_stack.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,40 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COREKIT_H
-# define COREKIT_H
+#include "corekit.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
-# include <limits.h>
-
-# include "stack.h"
-# include "libft.h"
-
-//Not including ft_printf.h and get_next_line.h because i don't want to
-//	inlcude also their help functions, so i just use their prototype
-
-typedef enum e_bool
+//Se lo stack è vuoto -> return
+void	ft_free_stack(t_stack *stack)
 {
-	false,
-	true
-}	t_bool;
+	t_stack	*temp;
 
-int		ft_printf(const char *format, ...);
-
-char	*get_next_line(int fd, int last_call);
-
-char	*ft_strjoin_free_s1(char *s1, char *s2);
-
-//MATIRX
-
-char	**ft_duplicate_char_matrix(char **matrix);
-
-void	ft_print_char_matrix(char **matrix);
-
-size_t	ft_count_matrix_row(void **matrix);
-
-void	ft_free_matrix(void **matrix);
-
-#endif
+	if (stack == NULL)
+		return ;
+	while (stack != NULL)
+	{
+		temp = stack;
+		stack = stack->next;
+		free(temp);
+	}
+}

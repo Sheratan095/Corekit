@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corekit.h                                          :+:      :+:    :+:   */
+/*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,40 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COREKIT_H
-# define COREKIT_H
+#include "stack.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
-# include <limits.h>
-
-# include "stack.h"
-# include "libft.h"
-
-//Not including ft_printf.h and get_next_line.h because i don't want to
-//	inlcude also their help functions, so i just use their prototype
-
-typedef enum e_bool
+//Creazione di un nuovo nodo
+//Memcheck
+//Assegnazione valori di default
+//Se lo stack non è vuoto
+//	il nuovo nodo va linkato a quello precendente e viceversa
+//Altrimenti
+//	lo stack diventa il nuovo nodo
+t_stack	*ft_push(t_stack *stack, int new_value)
 {
-	false,
-	true
-}	t_bool;
+	t_stack	*new_node;
 
-int		ft_printf(const char *format, ...);
-
-char	*get_next_line(int fd, int last_call);
-
-char	*ft_strjoin_free_s1(char *s1, char *s2);
-
-//MATIRX
-
-char	**ft_duplicate_char_matrix(char **matrix);
-
-void	ft_print_char_matrix(char **matrix);
-
-size_t	ft_count_matrix_row(void **matrix);
-
-void	ft_free_matrix(void **matrix);
-
-#endif
+	new_node = malloc(sizeof(t_stack));
+	if (!new_node)
+		return (NULL);
+	new_node->prev = NULL;
+	new_node->value = new_value;
+	if (stack != NULL)
+	{
+		stack->prev = new_node;
+		new_node->next = stack;
+	}
+	else
+	{
+		new_node->next = NULL;
+		stack = new_node;
+	}
+	return (new_node);
+}
