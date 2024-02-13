@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "corekit.h"
 
 t_bool	ft_is_string_numeric(char *str)
 {
