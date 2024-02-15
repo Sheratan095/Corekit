@@ -56,4 +56,19 @@ void	ft_display_stack(t_stack *stack);
 */
 void	ft_free_stack(t_stack *stack);
 
+/**
+	@brief Search duplicate node of equal value after node pointer
+	@param stack pointer to stack top element
+	@return false if no duplicate values are found
+*/
+t_bool	ft_search_duplicate(t_stack *stack);
+
+/**
+	@brief Checks if value exists inside of stack
+	@param the value to search
+	@param stack pointer to stack top element 
+	@return false if the value is not found
+*/
+t_bool	ft_stack_contains(int value, t_stack *stack)
+
 #endif
