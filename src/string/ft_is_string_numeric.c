@@ -20,11 +20,15 @@ t_bool	ft_is_string_numeric(char *str)
 	while (str[i])
 	{
 		if (ft_isdigit(str[i]) == 0)
+		{
 			if (i == 0)
+			{
 				if (str[i] != '-' && str[i] != '+')
 					return (false);
+			}
 			else
 				return (false);
+		}
 		i++;
 	}
 	return (true);
