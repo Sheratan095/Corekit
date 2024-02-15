@@ -62,11 +62,13 @@ SRC = ./src/char/ft_tolower.c \
 	./src/2d_matrix/ft_duplicate_char_matrix.c \
 	./src/2d_matrix/ft_print_char_matrix.c \
 	./src/2d_matrix/ft_free_matrix.c \
-	./src/int_stack/ft_push.c \
-	./src/int_stack/ft_display_stack.c \
-	./src/int_stack/ft_free_stack.c \
-	./src/int_stack/ft_pop.c \
 
+SRC_STACK = ./src/int_stack/ft_push.c \
+			./src/int_stack/ft_display_stack.c \
+			./src/int_stack/ft_free_stack.c \
+			./src/int_stack/ft_pop.c \
+			./src/int_stack/ft_stack_contains.c \
+			./src/int_stack/ft_search_duplicate.c
 
 SRC_PRINTF = ./src/ft_printf/ft_is_in.c \
 			./src/ft_printf/ft_printf.c \
@@ -80,7 +82,7 @@ SRC_PRINTF = ./src/ft_printf/ft_is_in.c \
 SRC_GET_NEXT_LINE = ./src/get_next_line/get_next_line_bonus.c \
 				./src/get_next_line/get_next_line_utils_bonus.c
 
-OBJ = ${SRC:.c=.o} ${SRC_PRINTF:.c=.o} ${SRC_GET_NEXT_LINE:.c=.o}
+OBJ = ${SRC:.c=.o} ${SRC_PRINTF:.c=.o} ${SRC_GET_NEXT_LINE:.c=.o} ${SRC_STACK:.c=.o}
 
 %.o: %.c
 	@$(COMPILE) -c $< -Iincludes -o $@

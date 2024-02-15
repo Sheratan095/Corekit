@@ -35,33 +35,26 @@ typedef struct s_stack
 	@param new_value value to assign to the new node
 	@return New top node pointer of the stack
 */
-t_stack	*ft_push(t_stack *stack, int new_value);
+t_stack		*ft_push(t_stack *stack, int new_value);
 
 /**
 	@brief Remove top element of the stack
 	@param stack pointer to stack top element 
 	@return New top node pointer of the stack
 */
-t_stack	*ft_pop(t_stack *stack);
+t_stack		*ft_pop(t_stack *stack);
 
 /**
 	@brief Print in the termial the stack, starting from top
 	@param stack pointer to stack top element 
 */
-void	ft_display_stack(t_stack *stack);
+void		ft_display_stack(t_stack *stack);
 
 /**
 	@brief Free the stack
 	@param stack pointer to stack top element 
 */
-void	ft_free_stack(t_stack *stack);
-
-/**
-	@brief Search duplicate node of equal value after node pointer
-	@param stack pointer to stack top element
-	@return false if no duplicate values are found
-*/
-t_bool	ft_search_duplicate(t_stack *stack);
+void		ft_free_stack(t_stack *stack);
 
 /**
 	@brief Checks if value exists inside of stack
@@ -69,6 +62,13 @@ t_bool	ft_search_duplicate(t_stack *stack);
 	@param stack pointer to stack top element 
 	@return false if the value is not found
 */
-t_bool	ft_stack_contains(int value, t_stack *stack)
+enum e_bool	ft_stack_contains(t_stack *stack, int value);
+
+/**
+	@brief Search duplicate node of equal value after node pointer
+	@param stack pointer to stack top element
+	@return false if no duplicate values are found
+*/
+enum e_bool	ft_search_duplicate(t_stack *stack);
 
 #endif
