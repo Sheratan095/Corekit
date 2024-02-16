@@ -16,7 +16,7 @@ t_bool	ft_search_duplicate(t_stack *stack)
 {
 	t_stack	*tmp;
 
-	if (!stack)
+	if (ft_is_stack_empty(stack))
 		return (false);
 	tmp = stack;
 	while (tmp)

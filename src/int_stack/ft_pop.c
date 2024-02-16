@@ -16,7 +16,7 @@ t_stack	*ft_pop(t_stack *stack)
 {
 	t_stack	*result;
 
-	if (stack == NULL)
+	if (ft_is_stack_empty(stack))
 		return (NULL);
 	result = stack->next;
 	free(stack);

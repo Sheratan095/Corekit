@@ -12,7 +12,6 @@
 
 #include "corekit.h"
 
-//Se lo stack è vuoto -> return
 void	ft_free_stack(t_stack *stack)
 {
 	t_stack	*temp;
