@@ -3,6 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/16 21:34:18 by marvin            #+#    #+#             */
+/*   Updated: 2024/02/16 21:34:18 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_push.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
 /*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:19:23 by maceccar          #+#    #+#             */
@@ -28,7 +40,7 @@ t_stack	*ft_push(t_stack *stack, int new_value)
 		return (NULL);
 	new_node->prev = NULL;
 	new_node->value = new_value;
-	if (stack != NULL)
+	if (!ft_is_stack_empty(stack))
 	{
 		stack->prev = new_node;
 		new_node->next = stack;
