@@ -30,18 +30,6 @@ typedef struct s_stack
 }	t_stack;
 
 /**
-	@brief Null initialize a new stack, next = NULL, prev = NULL
-	@param stack pointer to new stack
-	@return Pointer to new stack
-*/
-t_stack		*ft_initialize_stack(t_stack *stack);
-
-/**
-	@brief Verify if stack is empty
-*/
-enum e_bool	ft_is_stack_empty(t_stack *stack);
-
-/**
 	@brief Add new node to the stack
 	@param stack pointer to stack top element 
 	@param new_value value to assign to the new node
