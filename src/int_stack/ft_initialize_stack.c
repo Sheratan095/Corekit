@@ -14,10 +14,11 @@
 
 t_stack	*ft_initialize_stack(t_stack *stack)
 {
-	stack = malloc(sizeof(t_stack));
-	if (!stack)
-		return (NULL);
-	stack->next = NULL;
-	stack->prev = NULL;
+	// stack = malloc(sizeof(t_stack));
+	// if (!stack)
+	// 	return (NULL);
+	// stack->next = NULL;
+	// stack->prev = NULL;
+	stack = NULL;
 	return (stack);
 }
