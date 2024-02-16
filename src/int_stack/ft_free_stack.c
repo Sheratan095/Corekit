@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "corekit.h"
+#include "stack.h"
 
 //Se lo stack è vuoto -> return
 void	ft_free_stack(t_stack *stack)
