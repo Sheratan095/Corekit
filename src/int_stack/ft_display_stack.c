@@ -17,12 +17,12 @@ void	ft_display_stack(t_stack *stack)
 	t_stack	*temp;
 
 	temp = stack;
-	if (stack == NULL)
+	if (ft_is_stack_empty(stack))
 	{
 		ft_printf("Stack is empty\n");
 		return ;
 	}
-	while (temp != NULL)
+	while (temp->next != NULL)
 	{
 		ft_printf("%i\n", temp->value);
 		temp = temp->next;

@@ -17,12 +17,11 @@ void	ft_free_stack(t_stack *stack)
 {
 	t_stack	*temp;
 
-	if (stack == NULL)
-		return ;
-	while (stack != NULL)
+	while (stack->next != NULL)
 	{
 		temp = stack;
 		stack = stack->next;
 		free(temp);
 	}
+	free(stack);
 }

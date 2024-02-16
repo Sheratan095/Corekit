@@ -29,6 +29,10 @@ typedef struct s_stack
 	struct s_stack	*prev;
 }	t_stack;
 
+t_stack		*ft_initialize_stack(t_stack *stack);
+
+enum e_bool	ft_is_stack_empty(t_stack *stack);
+
 /**
 	@brief Add new node to the stack
 	@param stack pointer to stack top element 
