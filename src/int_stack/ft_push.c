@@ -33,22 +33,24 @@
 //	lo stack diventa il nuovo nodo
 t_stack	*ft_push(t_stack *stack, int new_value)
 {
-	t_stack	*new_node;
+	t_stack_node	*new_node;
 
-	new_node = malloc(sizeof(t_stack));
+	new_node = malloc(sizeof(t_stack_node));
 	if (!new_node)
 		return (NULL);
 	new_node->prev = NULL;
 	new_node->value = new_value;
-	if (!ft_is_stack_empty(stack))
+	if (ft_is_stack_empty(stack))
 	{
-		stack->prev = new_node;
-		new_node->next = stack;
+		new_node->next = NULL;
+		stack->head = new_node;
 	}
 	else
 	{
-		new_node->next = NULL;
-		stack = new_node;
+		new_node->next = stack->head;
+		new_node->prev = NULL;
+		stack->head = new_node;
 	}
-	return (new_node);
+	stack->length++;
+	return (stack);
 }

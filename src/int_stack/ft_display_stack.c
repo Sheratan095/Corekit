@@ -14,14 +14,17 @@
 
 void	ft_display_stack(t_stack *stack)
 {
-	if (stack == NULL)
+	t_stack_node	*temp;
+
+	if (ft_is_stack_empty(stack))
 	{
 		ft_printf("Stack is empty\n");
 		return ;
 	}
-	while (stack != NULL)
+	temp = stack->head;
+	while (temp != NULL)
 	{
-		ft_printf("%i\n", stack->value);
-		stack = stack->next;
+		ft_printf("%i\n", temp->value);
+		temp = temp->next;
 	}
 }

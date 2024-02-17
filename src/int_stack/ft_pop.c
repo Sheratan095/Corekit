@@ -12,13 +12,18 @@
 
 #include "stack.h"
 
-t_stack	*ft_pop(t_stack *stack)
+int	ft_pop(t_stack *stack)
 {
-	t_stack	*result;
+	t_stack_node	*temp;
+	int				result;
 
 	if (ft_is_stack_empty(stack))
-		return (NULL);
-	result = stack->next;
-	free(stack);
+		return (0);
+	temp = stack->head;
+	result = temp->value;
+	stack->head = stack->head->next;
+	stack->head->next = NULL;
+	free(temp);
+	stack->length--;
 	return (result);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_search_duplicate.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:19:23 by maceccar          #+#    #+#             */
-/*   Updated: 2024/02/07 16:19:23 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/02/18 00:42:16 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 t_bool	ft_search_duplicate(t_stack *stack)
 {
-	t_stack	*tmp;
+	t_stack_node	*tmp;
 
 	if (ft_is_stack_empty(stack))
 		return (false);
-	tmp = stack;
+	tmp = stack->head;
 	while (tmp)
 	{
-		if (ft_stack_contains(tmp->next, tmp->value))
+		if (ft_stack_contains(stack, tmp->value))
 			return (true);
 		tmp = tmp->next;
 	}

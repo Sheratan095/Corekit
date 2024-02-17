@@ -22,11 +22,19 @@
 			This will result in a compilation error because the compiler
 			doesn't know what t_stack is at that point.
 */
+
+typedef struct s_stack_node
+{
+	int					value;
+	struct s_stack_node	*next;
+	struct s_stack_node	*prev;
+}	t_stack_node;
+
 typedef struct s_stack
 {
-	int				value;
-	struct s_stack	*next;
-	struct s_stack	*prev;
+	int				length;
+	t_stack_node	*head;
+	//t_stack_node	tail;
 }	t_stack;
 
 t_stack		*ft_initialize_stack(t_stack *stack);
@@ -35,42 +43,42 @@ enum		e_bool	ft_is_stack_empty(t_stack *stack);
 
 /**
 	@brief Add new node to the stack
-	@param stack pointer to stack top element 
+	@param stack pointer to stack 
 	@param new_value value to assign to the new node
-	@return New top node pointer of the stack
+	@return Pointer to stack
 */
 t_stack		*ft_push(t_stack *stack, int new_value);
 
 /**
 	@brief Remove top element of the stack
-	@param stack pointer to stack top element 
-	@return New top node pointer of the stack
+	@param stack pointer to stack 
+	@return Value of popped node
 */
-t_stack		*ft_pop(t_stack *stack);
+int			ft_pop(t_stack *stack);
 
 /**
 	@brief Print in the termial the stack, starting from top
-	@param stack pointer to stack top element 
+	@param stack pointer to stack
 */
 void		ft_display_stack(t_stack *stack);
 
 /**
 	@brief Free the stack
-	@param stack pointer to stack top element 
+	@param stack pointer to stack
 */
 void		ft_free_stack(t_stack *stack);
 
 /**
 	@brief Checks if value exists inside of stack
-	@param the value to search
-	@param stack pointer to stack top element 
+	@param stack pointer to stack
+	@param value value to search
 	@return false if the value is not found
 */
 enum e_bool	ft_stack_contains(t_stack *stack, int value);
 
 /**
 	@brief Search duplicate node of equal value after node pointer
-	@param stack pointer to stack top element
+	@param stack pointer to stack
 	@return false if no duplicate values are found
 */
 enum e_bool	ft_search_duplicate(t_stack *stack);

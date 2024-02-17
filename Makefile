@@ -2,6 +2,7 @@ NAME = libcorekit.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 COMPILE = $(CC) $(CFLAGS)
+# TO DO rimettere le flag
 ARCHIVE = ar rc $(NAME)
 REMOVE = rm -f
 
@@ -65,12 +66,12 @@ SRC = ./src/char/ft_tolower.c \
 
 SRC_STACK = ./src/int_stack/ft_push.c \
 			./src/int_stack/ft_display_stack.c \
+			./src/int_stack/ft_is_stack_empty.c \
+			./src/int_stack/ft_initialize_stack.c \
 			./src/int_stack/ft_free_stack.c \
 			./src/int_stack/ft_pop.c \
 			./src/int_stack/ft_stack_contains.c \
 			./src/int_stack/ft_search_duplicate.c \
-			./src/int_stack/ft_is_stack_empty.c \
-			./src/int_stack/ft_initialize_stack.c \
 
 
 SRC_PRINTF = ./src/ft_printf/ft_is_in.c \
