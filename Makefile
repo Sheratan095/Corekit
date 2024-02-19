@@ -70,6 +70,7 @@ SRC_STACK = ./src/int_stack/ft_push.c \
 			./src/int_stack/ft_initialize_stack.c \
 			./src/int_stack/ft_free_stack.c \
 			./src/int_stack/ft_pop.c \
+			./src/int_stack/ft_pop_tail.c \
 			./src/int_stack/ft_stack_contains.c \
 			./src/int_stack/ft_search_duplicate.c \
 

@@ -57,6 +57,13 @@ t_stack		*ft_push(t_stack *stack, int new_value);
 int			ft_pop(t_stack *stack);
 
 /**
+	@brief Remove last element of the stack
+	@param stack pointer to stack
+	@return Value of popped node
+*/
+int			ft_pop_tail(t_stack *stack);
+
+/**
 	@brief Print in the termial the stack, starting from top
 	@param stack pointer to stack
 */
