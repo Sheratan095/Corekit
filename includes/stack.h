@@ -34,7 +34,7 @@ typedef struct s_stack
 {
 	int				length;
 	t_stack_node	*head;
-	//t_stack_node	tail;
+	t_stack_node	*tail;
 }	t_stack;
 
 t_stack		*ft_initialize_stack(t_stack *stack);
@@ -43,7 +43,7 @@ enum		e_bool	ft_is_stack_empty(t_stack *stack);
 
 /**
 	@brief Add new node to the stack
-	@param stack pointer to stack 
+	@param stack pointer to stack
 	@param new_value value to assign to the new node
 	@return Pointer to stack
 */
@@ -51,7 +51,7 @@ t_stack		*ft_push(t_stack *stack, int new_value);
 
 /**
 	@brief Remove top element of the stack
-	@param stack pointer to stack 
+	@param stack pointer to stack
 	@return Value of popped node
 */
 int			ft_pop(t_stack *stack);
@@ -82,5 +82,14 @@ enum e_bool	ft_stack_contains(t_stack *stack, int value);
 	@return false if no duplicate values are found
 */
 enum e_bool	ft_search_duplicate(t_stack *stack);
+
+
+/**
+	@brief Add new node to the bottom of the stack
+	@param stack pointer to stack
+	@param new_value value to assign to the new node
+	@return Pointer to stack
+*/
+enum e_bool ft_queue(t_stack *stack,int new_value);
 
 #endif

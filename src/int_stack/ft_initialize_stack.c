@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_initialize_stack.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lebartol <lebartol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 16:19:23 by maceccar          #+#    #+#             */
-/*   Updated: 2024/02/17 23:45:57 by marvin           ###   ########.fr       */
+/*   Updated: 2024/02/19 16:47:37 by lebartol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ t_stack	*ft_initialize_stack(t_stack *stack)
 	if (!stack)
 		return (NULL);
 	stack->head = NULL;
+	stack->tail = NULL;
 	stack->length = 0;
 	return (stack);
 }
