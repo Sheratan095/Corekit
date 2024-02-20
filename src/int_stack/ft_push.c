@@ -32,6 +32,7 @@ t_stack	*ft_push(t_stack *stack, int new_value)
 	{
 		new_node->next = NULL;
 		stack->head = new_node;
+		stack->tail = new_node;
 	}
 	else
 	{
@@ -39,5 +40,6 @@ t_stack	*ft_push(t_stack *stack, int new_value)
 		new_node->prev = NULL;
 		stack->head = new_node;
 	}
+	stack->length++;
 	return (stack);
 }

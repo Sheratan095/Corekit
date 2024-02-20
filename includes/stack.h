@@ -97,6 +97,6 @@ enum e_bool	ft_search_duplicate(t_stack *stack);
 	@param new_value value to assign to the new node
 	@return Pointer to stack
 */
-enum e_bool ft_queue(t_stack *stack,int new_value);
+t_stack		*ft_queue(t_stack *stack,int new_value);
 
 #endif
