@@ -21,24 +21,19 @@
 //	lo stack diventa il nuovo nodo
 t_stack	*ft_push(t_stack *stack, int new_value)
 {
-	t_stack_node	*new_node;
+	t_stack_node	*updated_head;
 
-	new_node = malloc(sizeof(t_stack_node));
-	if (!new_node)
-		return (NULL);
-	new_node->prev = NULL;
-	new_node->value = new_value;
+	updated_head = ft_create_node(new_value);
 	if (ft_is_stack_empty(stack))
 	{
-		new_node->next = NULL;
-		stack->head = new_node;
-		stack->tail = new_node;
+		stack->head = updated_head;
+		stack->tail = stack->head;
 	}
 	else
 	{
-		new_node->next = stack->head;
-		new_node->prev = NULL;
-		stack->head = new_node;
+		updated_head->next = stack->head;
+		stack->head->prev = updated_head;
+		stack->head = updated_head;
 	}
 	stack->length++;
 	return (stack);

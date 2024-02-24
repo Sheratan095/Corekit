@@ -64,16 +64,17 @@ SRC = ./src/char/ft_tolower.c \
 	./src/2d_matrix/ft_print_char_matrix.c \
 	./src/2d_matrix/ft_free_matrix.c \
 
-SRC_STACK = ./src/int_stack/ft_push.c \
+SRC_STACK = ./src/int_stack/ft_initialize_stack.c \
+			./src/int_stack/ft_create_node.c \
 			./src/int_stack/ft_display_stack.c \
 			./src/int_stack/ft_is_stack_empty.c \
-			./src/int_stack/ft_initialize_stack.c \
 			./src/int_stack/ft_free_stack.c \
+			./src/int_stack/ft_push.c \
+			./src/int_stack/ft_push_tail.c \
 			./src/int_stack/ft_pop.c \
 			./src/int_stack/ft_pop_tail.c \
 			./src/int_stack/ft_stack_contains.c \
 			./src/int_stack/ft_search_duplicate.c \
-			./src/int_stack/ft_queue.c \
 
 
 SRC_PRINTF = ./src/ft_printf/ft_is_in.c \

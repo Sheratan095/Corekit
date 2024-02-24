@@ -32,14 +32,16 @@ typedef struct s_stack_node
 
 typedef struct s_stack
 {
-	int				length;
-	t_stack_node	*head;
-	t_stack_node	*tail;
+	int					length;
+	struct s_stack_node	*head;
+	struct s_stack_node	*tail;
 }	t_stack;
 
-t_stack		*ft_initialize_stack(t_stack *stack);
+t_stack			*ft_initialize_stack(t_stack *stack);
 
-enum		e_bool	ft_is_stack_empty(t_stack *stack);
+t_stack_node	*ft_create_node(int value);
+
+enum e_bool		ft_is_stack_empty(t_stack *stack);
 
 /**
 	@brief Add new node to the stack
@@ -47,33 +49,33 @@ enum		e_bool	ft_is_stack_empty(t_stack *stack);
 	@param new_value value to assign to the new node
 	@return Pointer to stack
 */
-t_stack		*ft_push(t_stack *stack, int new_value);
+t_stack			*ft_push(t_stack *stack, int new_value);
 
 /**
 	@brief Remove top element of the stack
 	@param stack pointer to stack
 	@return Value of popped node
 */
-int			ft_pop(t_stack *stack);
+int				ft_pop(t_stack *stack);
 
 /**
 	@brief Remove last element of the stack
 	@param stack pointer to stack
 	@return Value of popped node
 */
-int			ft_pop_tail(t_stack *stack);
+int				ft_pop_tail(t_stack *stack);
 
 /**
 	@brief Print in the termial the stack, starting from top
 	@param stack pointer to stack
 */
-void		ft_display_stack(t_stack *stack);
+void			ft_display_stack(t_stack *stack);
 
 /**
 	@brief Free the stack
 	@param stack pointer to stack
 */
-void		ft_free_stack(t_stack *stack);
+void			ft_free_stack(t_stack *stack);
 
 /**
 	@brief Checks if value exists inside of stack
@@ -81,15 +83,14 @@ void		ft_free_stack(t_stack *stack);
 	@param value value to search
 	@return false if the value is not found
 */
-enum e_bool	ft_stack_contains(t_stack *stack, int value);
+enum e_bool		ft_stack_contains(t_stack *stack, int value);
 
 /**
 	@brief Search duplicate node of equal value after node pointer
 	@param stack pointer to stack
 	@return false if no duplicate values are found
 */
-enum e_bool	ft_search_duplicate(t_stack *stack);
-
+enum e_bool		ft_search_duplicate(t_stack *stack);
 
 /**
 	@brief Add new node to the bottom of the stack
@@ -97,6 +98,6 @@ enum e_bool	ft_search_duplicate(t_stack *stack);
 	@param new_value value to assign to the new node
 	@return Pointer to stack
 */
-t_stack		*ft_queue(t_stack *stack,int new_value);
+t_stack			*ft_push_tail(t_stack *stack, int new_value);
 
 #endif

@@ -24,8 +24,7 @@ int	ft_pop_tail(t_stack *stack)
 	temp = stack->tail;
 	result = temp->value;
 	stack->tail = stack->tail->prev;
-	// if (stack->tail != NULL)
-	// 	stack->tail->next = NULL;
+	stack->tail->next = NULL;
 	free(temp);
 	stack->length--;
 	return (result);
