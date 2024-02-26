@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lebartol <lebartol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 14/02/2024 01:34:18 by maceccar          #+#    #+#             */
-/*   Updated: 24/02/2024 19:46:19 by maceccar         ###   ########.fr       */
+/*   Created: 2014/02/20 01:34:18 by maceccar          #+#    #+#             */
+/*   Updated: 2024/02/26 15:19:54 by lebartol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,14 +81,14 @@ void			ft_free_stack(t_stack *stack);
 	@brief Checks if value exists inside of stack
 	@param stack pointer to stack
 	@param value value to search
-	@return false if the value is not found
+	@return the node found or NULL
 */
-enum e_bool		ft_stack_contains(t_stack *stack, int value);
+t_stack_node	*ft_stack_contains(t_stack *stack, int value);
 
 /**
 	@brief Search duplicate node of equal value after node pointer
 	@param stack pointer to stack
-	@return false if no duplicate values are found
+	@return true if duplicate is found
 */
 enum e_bool		ft_search_duplicate(t_stack *stack);
 
