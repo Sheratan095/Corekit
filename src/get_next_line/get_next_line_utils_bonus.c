@@ -12,6 +12,8 @@
 
 #include "get_next_line_bonus.h"
 
+//THIS FILE ISN'T INCLUDED IN MAKEFILE COMPILATION BECAUSE
+//CONTAINS ONLY FUNCIONT CANTAINED ALSO IN COREKIT
 size_t	ft_strlen(char *s)
 {
 	size_t	i;

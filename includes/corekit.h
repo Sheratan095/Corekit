@@ -32,7 +32,7 @@ typedef enum e_bool
 
 int		ft_printf(const char *format, ...);
 
-char	*get_next_line(int fd, int last_call);
+char	*get_next_line(int fd, t_bool last_call);
 
 char	*ft_strjoin_free_s1(char *s1, char *s2);
 

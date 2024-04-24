@@ -20,11 +20,17 @@ char	*format_new_reminder(char *reminder);
 //		'\n' oppure il file è finito
 // Estrae la stringa risultante da quella main(reminder)
 // Area il nuove reminder eliminando la linea appena eliminata, (substring?)
-char	*get_next_line(int fd)
+char	*get_next_line(int fd, t_bool last_call)
 {
 	static char	*reminder[OPEN_MAX];
 	char		*output;
 
+	if (last_call)
+	{
+		free(reminder[fd]);
+		reminder[fd] = NULL;
+		return (NULL);
+	}
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
 	reminder[fd] = read_line(fd, reminder[fd]);
