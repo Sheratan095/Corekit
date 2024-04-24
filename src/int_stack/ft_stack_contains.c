@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stack_contains.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lebartol <lebartol@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/02/20 17:15:20 by maceccar          #+#    #+#             */
-/*   Updated: 2024/02/26 15:17:45 by lebartol         ###   ########.fr       */
+/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
+/*   Updated: 2024/04/24 22:35:03 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

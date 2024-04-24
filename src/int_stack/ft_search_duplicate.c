@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_search_duplicate.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 15/02/2024 17:15:20 by maceccar          #+#    #+#             */
-/*   Updated: 24/02/2024 19:46:19 by maceccar         ###   ########.fr       */
+/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
+/*   Updated: 2024/04/24 22:35:03 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

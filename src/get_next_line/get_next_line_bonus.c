@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 14/02/2024 01:34:18 by maceccar          #+#    #+#             */
-/*   Updated: 24/02/2024 19:46:19 by maceccar         ###   ########.fr       */
+/*   Created: 2024/04/24 22:32:52 by maceccar          #+#    #+#             */
+/*   Updated: 2024/04/24 22:35:03 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,14 @@ char	*format_result(char *reminder);
 char	*format_new_reminder(char *reminder);
 
 // Legge e aggiunge alla stringa main finchè non viene letto uno
-// Se last_call == 1 -> libera variabile statica
 //		'\n' oppure il file è finito
 // Estrae la stringa risultante da quella main(reminder)
 // Area il nuove reminder eliminando la linea appena eliminata, (substring?)
-char	*get_next_line(int fd, int last_call)
+char	*get_next_line(int fd)
 {
 	static char	*reminder[OPEN_MAX];
 	char		*output;
 
-	if (last_call == 1)
-		return (free(reminder[fd]), NULL);
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
 	reminder[fd] = read_line(fd, reminder[fd]);
@@ -55,7 +52,7 @@ char	*read_line(int fd, char *reminder)
 	if (!buffer)
 		return (NULL);
 	read_bytes = 1;
-	while (!ft_strchr_gnl(reminder, '\n') && read_bytes != 0)
+	while (!ft_strchr(reminder, '\n') && read_bytes != 0)
 	{
 		read_bytes = read(fd, buffer, BUFFER_SIZE);
 		if (read_bytes < 0)
@@ -65,7 +62,7 @@ char	*read_line(int fd, char *reminder)
 			return (NULL);
 		}
 		buffer[read_bytes] = '\0';
-		reminder = ft_strjoin_free_s1_gnl(reminder, buffer);
+		reminder = ft_strjoin_free_s1(reminder, buffer);
 		if (!reminder)
 			return (free(buffer), NULL);
 	}
@@ -125,7 +122,7 @@ char	*format_new_reminder(char *reminder)
 		free(reminder);
 		return (NULL);
 	}
-	new_reminder = (char *)malloc(sizeof(char) * (ft_sl_gnl(reminder) - i + 1));
+	new_reminder = (char *)malloc(sizeof(char) * (ft_strlen(reminder) - i + 1));
 	if (!new_reminder)
 		return (NULL);
 	i++;
