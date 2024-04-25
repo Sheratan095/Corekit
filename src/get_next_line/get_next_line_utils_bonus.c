@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
+/*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/04/24 22:35:03 by maceccar         ###   ########.fr       */
+/*   Created: 2024/02/07 15:56:07 by maceccar          #+#    #+#             */
+/*   Updated: 2024/02/07 15:56:07 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-//THIS FILE ISN'T INCLUDED IN MAKEFILE COMPILATION BECAUSE
-//CONTAINS ONLY FUNCIONT CANTAINED ALSO IN COREKIT
-size_t	ft_strlen(char *s)
+size_t	ft_strlen_gnl(char *s)
 {
 	size_t	i;
 
@@ -26,7 +24,7 @@ size_t	ft_strlen(char *s)
 	return (i);
 }
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr_gnl(char *s, int c)
 {
 	int	i;
 
@@ -44,7 +42,7 @@ char	*ft_strchr(char *s, int c)
 	return (0);
 }
 
-char	*ft_strjoin_free_s1(char *s1, char *s2)
+char	*ft_strjoin_free_s1_gnl(char *s1, char *s2)
 {
 	size_t	i;
 	size_t	j;

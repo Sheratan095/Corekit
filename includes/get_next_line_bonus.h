@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
+/*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/04/24 22:35:03 by maceccar         ###   ########.fr       */
+/*   Created: 2024/02/07 15:55:49 by maceccar          #+#    #+#             */
+/*   Updated: 2024/02/07 15:55:49 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
+# include <stdlib.h>
+# include <unistd.h>
 # include "corekit.h"
 
 # ifndef BUFFER_SIZE
@@ -27,5 +29,11 @@
 char	*get_next_line(int fd, t_bool last_call);
 
 char	*ft_get_line(char *left_str);
+
+char	*ft_strchr_gnl(char *s, int c);
+
+char	*ft_strjoin_free_s1_gnl(char *s1, char *s2);
+
+size_t	ft_strlen_gnl(char *s);
 
 #endif
