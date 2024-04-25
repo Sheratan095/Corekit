@@ -1,7 +1,7 @@
 # Usage
 
 ``` makefile
-COREKIT_PATH = ./corekit #path of corekit folder
+COREKIT_PATH = ./Corekit #path of corekit folder
 
 INCLUDES = -I$(COREKIT_PATH)/includes #path of includes folder in corekit
 
