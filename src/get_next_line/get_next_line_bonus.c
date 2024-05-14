@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 15:55:37 by maceccar          #+#    #+#             */
-/*   Updated: 2024/02/07 15:55:37 by maceccar         ###   ########.fr       */
+/*   Created: 2024/04/30 11:22:43 by maceccar          #+#    #+#             */
+/*   Updated: 2024/05/03 00:47:17 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ char	*format_result(char *reminder)
 	return (result);
 }
 
-// Arrova allo \n (fine della stringa di output) o alla fine della string
+// Arriva allo \n (fine della stringa di output) o alla fine della string
 // Se non c'è più niente vuol dire che il reminder deve essere vuoto
 // 'new_reminder' allocato per la lunghezza totale - lunghezza
 // 		della stringa risultante +1(\0)
@@ -116,7 +116,7 @@ char	*format_result(char *reminder)
 // Liberato il vecchio reminder
 char	*format_new_reminder(char *reminder)
 {
-	char	*new_reminder;
+	char	*result;
 	int		i;
 	int		j;
 
@@ -128,14 +128,14 @@ char	*format_new_reminder(char *reminder)
 		free(reminder);
 		return (NULL);
 	}
-	new_reminder = (char *)malloc(sizeof(char) * (ft_strlen_gnl(reminder) - i + 1));
-	if (!new_reminder)
+	result = (char *)malloc(sizeof(char) * (ft_strlen_gnl(reminder) - i + 1));
+	if (!result)
 		return (NULL);
 	i++;
 	j = 0;
 	while (reminder[i])
-		new_reminder[j++] = reminder[i++];
-	new_reminder[j] = '\0';
+		result[j++] = reminder[i++];
+	result[j] = '\0';
 	free(reminder);
-	return (new_reminder);
+	return (result);
 }
