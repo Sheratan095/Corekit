@@ -34,11 +34,11 @@ _In this example the project structure is:_
 
 The library (.a file) is called libcorekit.a beacause all the library during compilation must start with 'lib' prefix
 
-<br>
+<!--<br>
 
 <span style='color:green'>\t</span> &emsp; is just a tab for indentatin level
 
-<br>
+<br>-->
 
 <span style='color:green'>$@</span>&ensp; rename with target file name and in the directory of c  original file
 
