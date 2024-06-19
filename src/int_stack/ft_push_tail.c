@@ -23,9 +23,9 @@ t_stack	*ft_push_tail(t_stack *stack, int new_value)
 {
 	t_stack_node	*new_tail;
 
-	new_tail = ft_create_node(new_value);
 	if (ft_is_stack_empty(stack))
 		return (ft_push(stack, new_value));
+	new_tail = ft_create_node(new_value);
 	new_tail->value = new_value;
 	new_tail->prev = stack->tail;
 	stack->tail->next = new_tail;
