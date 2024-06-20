@@ -6,7 +6,7 @@
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/04/24 22:35:03 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:16:17 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ int				ft_memcmp(const void *str1, const void *str2, size_t n);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
 
 int				ft_atoi(const char *str);
+
+long			ft_atol(const char *s);
 
 void			*ft_calloc(size_t nitems, size_t size);
 

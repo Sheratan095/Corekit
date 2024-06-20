@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_itol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/06/20 19:16:17 by maceccar         ###   ########.fr       */
+/*   Created: 2024/06/20 19:16:37 by maceccar          #+#    #+#             */
+/*   Updated: 2024/06/20 19:16:37 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+long	ft_atol(const char *s)
+{
+	long	res;
+	int		sign;
 
-# include "corekit.h"
-
-int		ft_putptr(unsigned long lnb, char *base);
-
-int		ft_is_in(char c, const char *ptr);
-
-int		ft_putchar(char c);
-
-int		ft_putstr(const char *str);
-
-int		ft_putnbr(long int nb);
-
-int		ft_printf(const char	*format, ...);
-
-int		ft_putbase(unsigned int nb, char *base);
-
-int		ft_unsignedputnbr(int n);
-
-#endif
+	res = 0;
+	sign = 1;
+	while (*s == ' ' || (*s > 8 && *s < 14))
+		s++;
+	if (*s == '-')
+		sign = -1;
+	if (*s == '-' || *s == '+')
+		s++;
+	while (ft_isdigit(*s))
+		res = res * 10 + *s++ - '0';
+	return (res * sign);
+}

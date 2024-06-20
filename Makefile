@@ -15,6 +15,7 @@ RESET=\033[0m
 SRC = ./src/char/ft_tolower.c \
 	./src/char/ft_toupper.c \
 	./src/conversions/ft_atoi.c \
+	./src/conversions/ft_atol.c \
 	./src/conversions/ft_itoa.c \
 	./src/list/ft_lstadd_back.c \
 	./src/list/ft_lstadd_front.c \
