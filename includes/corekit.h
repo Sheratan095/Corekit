@@ -6,7 +6,7 @@
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/06/20 19:16:17 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/06/26 13:41:11 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,17 @@ char	*get_next_line(int fd, t_bool last_call);
 
 char	*ft_strjoin_free_s1(char *s1, char *s2);
 
-t_bool	ft_is_string_numeric(char *str);
+t_bool	ft_is_string_numeric(const char *str);
+
+int		ft_get_absolute(int number);
 
 //MATIRX
 
-char	**ft_duplicate_char_matrix(char **matrix);
+char	**ft_duplicate_char_matrix(const char **matrix);
 
-void	ft_print_char_matrix(char **matrix);
+void	ft_print_char_matrix(const char **matrix);
 
-size_t	ft_count_matrix_row(void **matrix);
+size_t	ft_count_matrix_row(const void **matrix);
 
 void	ft_free_matrix(void **matrix);
 

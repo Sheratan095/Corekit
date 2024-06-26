@@ -6,7 +6,7 @@
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/06/20 19:16:17 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/06/26 13:41:11 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,6 @@
 
 # include "corekit.h"
 
-/**
-	Struct used for the dubly linked list of int
-
-	Circular dependency: con't use t_stack because it isn't still defined
-			This will result in a compilation error because the compiler
-			doesn't know what t_stack is at that point.
-*/
-
 typedef struct s_stack_node
 {
 	int					value;
@@ -30,21 +22,38 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }	t_stack_node;
 
+//TO DO levare name?
 typedef struct s_stack
 {
-	int					length;
+	char				name;
+	size_t				length;
 	struct s_stack_node	*head;
 	struct s_stack_node	*tail;
 }	t_stack;
 
+/**
+	@brief Allocate the stack and set to NULL head and tail
+	@param stack pointer to stack that will be allocated
+	@return Pointer to allocated stack
+*/
 t_stack			*ft_initialize_stack(t_stack *stack);
 
+/**
+	@brief Create a new node of the stack
+	@param new_value value to assign to the new node
+	@return Pointer to created node
+*/
 t_stack_node	*ft_create_node(int value);
 
+/**
+	@brief Check if stack is empty or null
+	@param stack pointer to stack
+	@return Boolean
+*/
 enum e_bool		ft_is_stack_empty(t_stack *stack);
 
 /**
-	@brief Add new node to the stack
+	@brief Create new node and add it to the stack
 	@param stack pointer to stack
 	@param new_value value to assign to the new node
 	@return Pointer to stack
@@ -69,7 +78,7 @@ int				ft_pop_tail(t_stack *stack);
 	@brief Print in the termial the stack, starting from top
 	@param stack pointer to stack
 */
-void			ft_display_stack(t_stack *stack);
+void			ft_print_stack(t_stack *stack);
 
 /**
 	@brief Free the stack
@@ -99,5 +108,35 @@ enum e_bool		ft_search_duplicate(t_stack *stack);
 	@return Pointer to stack
 */
 t_stack			*ft_push_tail(t_stack *stack, int new_value);
+
+/**
+	@brief Get index of the node in the stack
+	@param stack pointer to stack
+	@param node pointer to node
+	@return Position of the node or -1 if not found or if stack/node are null
+	TO DO sarebbe ancora meglio usare ssize_t (size_t che include anche -1)
+*/
+int				ft_get_position_in_stack(t_stack *stack, t_stack_node *node);
+
+/**
+	@brief Find the minimum value in the stack
+	@param stack pointer to stack
+	@return Minimum value or 0 if stack is empty
+*/
+int				ft_get_min_value(t_stack *stack);
+
+/**
+	@brief Find the maximum value in the stack
+	@param stack pointer to stack
+	@return Maximum value or 0 if stack is empty
+*/
+int				ft_get_max_value(t_stack *stack);
+
+/**
+	@brief Check if stack is ordered
+	@param stack pointer to stack
+	@return Boolean
+*/
+enum e_bool		ft_is_stack_ordered(t_stack *stack);
 
 #endif

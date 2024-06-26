@@ -6,7 +6,7 @@
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/06/20 19:16:17 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/06/26 13:41:11 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int				ft_isalnum(int c);
 int				ft_isascii(int c);
 
 int				ft_isprint(int c);
+
+int				ft_isspace(int c);
 
 size_t			ft_strlen(const char	*str);
 

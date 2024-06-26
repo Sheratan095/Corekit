@@ -1,8 +1,7 @@
 NAME = libcorekit.a
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 COMPILE = $(CC) $(CFLAGS)
-# TO DO rimettere le flag
 ARCHIVE = ar rc $(NAME)
 REMOVE = rm -f
 
@@ -59,15 +58,17 @@ SRC = ./src/char/ft_tolower.c \
 	./src/types/ft_isalpha.c \
 	./src/types/ft_isascii.c \
 	./src/types/ft_isdigit.c \
+	./src/types/ft_isspace.c \
 	./src/types/ft_isprint.c \
 	./src/2d_matrix/ft_count_matrix_row.c \
 	./src/2d_matrix/ft_duplicate_char_matrix.c \
 	./src/2d_matrix/ft_print_char_matrix.c \
 	./src/2d_matrix/ft_free_matrix.c \
+	./src/int/ft_get_absolute.c \
 
 SRC_STACK = ./src/int_stack/ft_initialize_stack.c \
 			./src/int_stack/ft_create_node.c \
-			./src/int_stack/ft_display_stack.c \
+			./src/int_stack/ft_print_stack.c \
 			./src/int_stack/ft_is_stack_empty.c \
 			./src/int_stack/ft_free_stack.c \
 			./src/int_stack/ft_push.c \
@@ -76,6 +77,10 @@ SRC_STACK = ./src/int_stack/ft_initialize_stack.c \
 			./src/int_stack/ft_pop_tail.c \
 			./src/int_stack/ft_stack_contains.c \
 			./src/int_stack/ft_search_duplicate.c \
+			./src/int_stack/ft_get_position_in_stack.c \
+			./src/int_stack/ft_get_min_value.c \
+			./src/int_stack/ft_get_max_value.c \
+			./src/int_stack/ft_is_stack_ordered.c \
 
 
 SRC_PRINTF = ./src/ft_printf/ft_is_in.c \
