@@ -6,7 +6,7 @@
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/06/26 13:41:11 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/07/29 14:50:44 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <limits.h>
+# include <sys/time.h>
 
 # include "stack.h"
 # include "libft.h"
@@ -49,5 +50,9 @@ void	ft_print_char_matrix(const char **matrix);
 size_t	ft_count_matrix_row(const void **matrix);
 
 void	ft_free_matrix(void **matrix);
+
+//TIME
+
+size_t	ft_get_current_time(void);
 
 #endif

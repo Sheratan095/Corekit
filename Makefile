@@ -65,6 +65,7 @@ SRC = ./src/char/ft_tolower.c \
 	./src/2d_matrix/ft_print_char_matrix.c \
 	./src/2d_matrix/ft_free_matrix.c \
 	./src/int/ft_get_absolute.c \
+	./src/time/ft_get_current_time.c \
 
 SRC_STACK = ./src/int_stack/ft_initialize_stack.c \
 			./src/int_stack/ft_create_node.c \
@@ -105,15 +106,15 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(ARCHIVE) $(OBJ)
-	@echo "$(GREEN)[COREKIT]: \t LIBRARY CREATED$(RESET)"
+#	@echo "$(GREEN)[COREKIT]: \t LIBRARY CREATED$(RESET)"
 
 clean:
 	@$(REMOVE) $(OBJ)
-	@echo "$(RED)[COREKIT]: \t OBJECTS DELETED$(RESET)"
+#	@echo "$(RED)[COREKIT]: \t OBJECTS DELETED$(RESET)"
 
 fclean: clean
 	@$(REMOVE) $(NAME)
-	@echo "$(RED)[COREKIT]: \t LIBRARY DELETED$(RESET)"
+#	@echo "$(RED)[COREKIT]: \t LIBRARY DELETED$(RESET)"
 
 re: fclean all
 

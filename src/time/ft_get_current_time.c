@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_get_current_time.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/07/29 14:49:22 by maceccar         ###   ########.fr       */
+/*   Created: 2024/07/29 14:48:55 by maceccar          #+#    #+#             */
+/*   Updated: 2024/07/29 15:05:54 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "corekit.h"
 
-void	*ft_calloc(size_t nitems, size_t size)
+//I'm not sure it works
+size_t	ft_get_current_time(void)
 {
-	void	*tmp;
+	struct timeval	time;
 
-	tmp = malloc(nitems * size);
-	if (!tmp)
-		return (NULL);
-	return (ft_bzero(tmp, nitems * size));
+	if (gettimeofday(&time, NULL) == -1)
+		return (-1);
+	return (time.tv_sec * 1000 + time.tv_usec / 1000);
 }
