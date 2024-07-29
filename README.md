@@ -3,14 +3,24 @@
 ``` makefile
 COREKIT_PATH = ./Corekit #path of corekit folder
 
+FLAGS		= -Wall -Werror -Wextra -g
+
 INCLUDES = -I$(COREKIT_PATH)/includes #path of includes folder in corekit
 
 %.o: %.c
-	cc $(INCLUDES) -c $< -o $@
+	cc $(FLAGS) $(INCLUDES) -c $< -o $@
 
 $(NAME): $(OBJ)
-	$(MAKE) -C $(COREKIT_PATH) #execute make in corekit folder
-	cc $(INCLUDES) $(OBJ) -L$(COREKIT_PATH) -lcorekit -o $(NAME) #-lcorekit: includes library name (libcorekit)
+	$(MAKE) -sC $(COREKIT_PATH) #execute make in corekit folder in silent mode
+	cc $(FLAGS) $(INCLUDES) $(OBJ) -L$(COREKIT_PATH) -lcorekit -o $(NAME)
+	#-lcorekit: includes library name (libcorekit)
+	#-L$(COREKIT_PATH): link the specified directory to main compilation
+
+clean:
+	@${MAKE} -C corekit clean
+
+fclean: clean
+	@${MAKE} -C corekit fclean -s
 ```
 <br>
 
