@@ -6,7 +6,7 @@
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/07/29 14:49:22 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/07/31 19:08:41 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_count_matrix_row(const void **matrix)
 {
 	size_t	i;
 
+	if (matrix == NULL)
+		return (0);
 	i = 0;
 	while (matrix[i])
 		i++;
