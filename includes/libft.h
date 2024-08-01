@@ -58,6 +58,7 @@ char			*ft_strrchr(const char *str, int c);
 
 int				ft_strncmp(const char *str1, const char *str2, size_t n);
 
+//TO DO cambiargli nome
 int				ft_find_occurrences(char *str, char c, size_t start_index);
 
 void			*ft_memchr(const void *str, int c, size_t n);
