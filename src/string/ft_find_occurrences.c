@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   find_occurrences.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/07/31 19:28:43 by maceccar         ###   ########.fr       */
+/*   Created: 2024/08/01 16:22:21 by maceccar          #+#    #+#             */
+/*   Updated: 2024/08/01 16:22:21 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+int	ft_find_occurrences(char *str, char c, size_t start_index)
 {
-	del(lst->content);
-	free(lst);
+	int	count;
+	int	i;
+
+	count = 0;
+	i = start_index;
+	while (str[i])
+	{
+		if (str[i++] == c)
+			count++;
+	}
+	return (count);
 }

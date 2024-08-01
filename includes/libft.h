@@ -6,7 +6,7 @@
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/07/31 19:08:41 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/07/31 19:28:43 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void			*ft_memmove(void *dest, const void *src, size_t count);
 
 size_t			ft_strlcpy(char *dest, const char *src, size_t size);
 
+// TO DO cast it to size_t
 unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size);
 
 int				ft_toupper(int c);
@@ -56,6 +57,8 @@ char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *str, int c);
 
 int				ft_strncmp(const char *str1, const char *str2, size_t n);
+
+int				ft_find_occurrences(char *str, char c, size_t start_index);
 
 void			*ft_memchr(const void *str, int c, size_t n);
 
