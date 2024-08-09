@@ -6,7 +6,7 @@
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/07/31 19:28:43 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/08/08 00:37:28 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_print_char_matrix(const char **matrix)
 	int	i;
 
 	i = 0;
+	if (!matrix)
+		return ;
 	while (matrix[i])
 	{
 		write(1, matrix[i], ft_strlen(matrix[i]));
