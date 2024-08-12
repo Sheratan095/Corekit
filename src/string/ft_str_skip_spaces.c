@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char_matrix.c                             :+:      :+:    :+:   */
+/*   ft_str_skip_whitespaces.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/08/12 16:36:10 by maceccar         ###   ########.fr       */
+/*   Created: 2024/08/12 21:52:46 by maceccar          #+#    #+#             */
+/*   Updated: 2024/08/12 21:52:46 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corekit.h"
 
-void	ft_print_char_matrix(const char **matrix)
+void	ft_str_skip_spaces(char *string, int *i)
 {
-	int	i;
-
-	i = 0;
-	if (!matrix)
-		return ;
-	while (matrix[i])
-	{
-		write(1, matrix[i], ft_strlen(matrix[i]));
-		write(1, "\n", 1);
-		i++;
-	}
+	while (ft_isspace(string[*i]))
+		*i++;
 }

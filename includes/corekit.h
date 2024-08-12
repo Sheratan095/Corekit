@@ -6,7 +6,7 @@
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/08/12 16:27:16 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/08/12 17:09:29 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*ft_strjoin_free_s1(char *s1, char *s2);
 t_bool	ft_is_string_numeric(const char *str);
 
 t_bool	ft_is_string_empty(char	*string);
+
+void	ft_str_skip_spaces(char *string, int *i);
 
 int		ft_get_absolute(int number);
 
