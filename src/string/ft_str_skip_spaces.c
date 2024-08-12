@@ -15,5 +15,5 @@
 void	ft_str_skip_spaces(char *string, int *i)
 {
 	while (ft_isspace(string[*i]))
-		*i++;
+		(*i)++;
 }
