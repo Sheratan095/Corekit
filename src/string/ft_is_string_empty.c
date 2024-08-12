@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_is_string_empty.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/08/12 16:27:16 by maceccar         ###   ########.fr       */
+/*   Created: 2024/08/12 16:36:08 by maceccar          #+#    #+#             */
+/*   Updated: 2024/08/12 16:36:08 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "corekit.h"
 
-void	*ft_calloc(size_t nitems, size_t size)
+t_bool	ft_is_string_empty(char	*string)
 {
-	void	*tmp;
+	int	i;
 
-	tmp = malloc(nitems * size);
-	if (!tmp)
-		return (NULL);
-	return (ft_bzero(tmp, nitems * size));
+	i = 0;
+	while (string[i])
+	{
+		if (!ft_isspace(string[i]))
+			return (false);
+	}
+	return (true);
 }
