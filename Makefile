@@ -53,6 +53,7 @@ SRC = ./src/char/ft_tolower.c \
 	./src/string/ft_find_occurrences.c \
 	./src/string/ft_is_string_empty.c \
 	./src/string/ft_str_skip_spaces.c \
+	./src/string/ft_str_idxofchar.c \
 	./src/output/ft_putchar_fd.c \
 	./src/output/ft_putendl_fd.c \
 	./src/output/ft_putnbr_fd.c \

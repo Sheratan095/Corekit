@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtolower.c                                    :+:      :+:    :+:   */
+/*   ft_str_idxofchar.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/08/28 14:51:32 by maceccar         ###   ########.fr       */
+/*   Created: 2024/08/29 16:02:03 by maceccar          #+#    #+#             */
+/*   Updated: 2024/08/29 16:09:02 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtolower(char *s)
+int	ft_str_idxofchar(const char *s, char c)
 {
-	int		i;
+	int	i;
 
 	i = -1;
-	if (!s)
-		return (s);
-	while (s[++i])
-		s[i] = ft_tolower(s[i]);
-	return (s);
+	while (s && s[++i])
+		if (s[i] == c)
+			return (i);
+	return (-1);
+}
+
+int	ft_str_idxofchar_from(const char *s, int start, char c)
+{
+	int	i;
+
+	i = start - 1;
+	while (s && s[++i])
+		if (s[i] == c)
+			return (i);
+	return (-1);
 }

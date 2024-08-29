@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/08/28 00:05:55 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/08/29 16:04:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,12 @@ char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *str, int c);
 
 int				ft_strncmp(const char *str1, const char *str2, size_t n);
+
+// TO DO change it in ssize_T
+int				ft_str_idxofchar(const char *s, char c);
+
+// TO DO change it in ssize_T
+int				ft_str_idxofchar_from(const char *s, int start, char c);
 
 //TO DO cambiargli nome
 int				ft_find_occurrences(char *str, char c, size_t start_index);
