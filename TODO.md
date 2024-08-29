@@ -1,0 +1,4 @@
+- [] change return value of ft_strlcat() from unsigned int to size_t
+- [] change return value of ft_str_idxofchar() from int to ssize_t
+- [] change return value of ft_str_idxofchar_from() from int to ssize_t
+- [] change the name of ft_find_occurrences()
