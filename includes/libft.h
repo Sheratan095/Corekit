@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/08/29 16:04:39 by marvin           ###   ########.fr       */
+/*   Updated: 2024/08/29 17:49:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ char			*ft_strchr(const char *str, int c);
 char			*ft_strrchr(const char *str, int c);
 
 int				ft_strncmp(const char *str1, const char *str2, size_t n);
+
+int				ft_str_cmp(const char *s1, const char *s2);
 
 // TO DO change it in ssize_T
 int				ft_str_idxofchar(const char *s, char c);

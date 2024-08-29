@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_matrix.c                                   :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/08/29 17:49:15 by maceccar         ###   ########.fr       */
+/*   Created: 2024/08/29 17:49:14 by maceccar          #+#    #+#             */
+/*   Updated: 2024/08/29 17:49:59 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_matrix(void **matrix)
+int	ft_str_cmp(const char *s1, const char *s2)
 {
-	int	i;
+	size_t			i;
+	unsigned char	*s1p;
+	unsigned char	*s2p;
 
-	if (!matrix)
-		return ;
+	s1p = (unsigned char *)s1;
+	s2p = (unsigned char *)s2;
 	i = 0;
-	while (matrix[i])
-	{
-		free(matrix[i]);
+	if (!s1 || !s2)
+		return (INT_MIN);
+	while (s2p[i] == s1p[i] && s2p[i] && s1p[i])
 		i++;
-	}
-	free(matrix);
+	return (s1p[i] - s2p[i]);
 }

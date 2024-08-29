@@ -43,6 +43,7 @@ SRC = ./src/char/ft_tolower.c \
 	./src/string/ft_strlen.c \
 	./src/string/ft_strmapi.c \
 	./src/string/ft_strncmp.c \
+	./src/string/ft_strcmp.c \
 	./src/string/ft_strnstr.c \
 	./src/string/ft_strrchr.c \
 	./src/string/ft_strtolower.c \
