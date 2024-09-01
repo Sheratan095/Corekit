@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/08/29 17:49:50 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/01 18:56:43 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define LIBFT_H
 
 # include "corekit.h"
+
+// Forward Declarations 
+typedef enum e_bool	t_bool;
 
 typedef struct s_list
 {
@@ -68,6 +71,8 @@ int				ft_str_idxofchar_from(const char *s, int start, char c);
 
 //TO DO cambiargli nome
 int				ft_find_occurrences(char *str, char c, size_t start_index);
+
+char			*ft_strconcat(char *s1, char *s2, t_bool free_src);
 
 void			*ft_memchr(const void *str, int c, size_t n);
 

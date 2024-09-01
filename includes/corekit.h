@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   corekit.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/08/29 17:49:15 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/09/01 18:55:46 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@
 # include "stack.h"
 # include "libft.h"
 
-//Not including ft_printf.h and get_next_line.h because i don't want to
-//	inlcude also their help functions, so i just use their prototype
-
 typedef enum e_bool
 {
 	false,
 	true
 }	t_bool;
+
+//Not including ft_printf.h and get_next_line.h because i don't want to
+//	inlcude also their help functions, so i just use their prototype
 
 int		ft_printf(const char *format, ...);
 
