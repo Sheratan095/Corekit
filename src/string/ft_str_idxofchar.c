@@ -12,24 +12,24 @@
 
 #include "libft.h"
 
-int	ft_str_idxofchar(const char *s, char c)
+ssize_t	ft_str_idxofchar(const char *str, char c)
 {
-	int	i;
+	ssize_t	i;
 
 	i = -1;
-	while (s && s[++i])
-		if (s[i] == c)
+	while (str && str[++i])
+		if (str[i] == c)
 			return (i);
 	return (-1);
 }
 
-int	ft_str_idxofchar_from(const char *s, int start, char c)
+ssize_t	ft_str_idxofchar_from(const char *str, int start, char c)
 {
-	int	i;
+	ssize_t	i;
 
 	i = start - 1;
-	while (s && s[++i])
-		if (s[i] == c)
+	while (str && str[++i])
+		if (str[i] == c)
 			return (i);
 	return (-1);
 }

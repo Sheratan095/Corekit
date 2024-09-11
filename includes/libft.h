@@ -62,11 +62,9 @@ int		ft_strncmp(const char *str1, const char *str2, size_t n);
 
 int		ft_strcmp(const char *s1, const char *s2);
 
-// TO DO change it in ssize_T
-int		ft_str_idxofchar(const char *s, char c);
+ssize_t	ft_str_idxofchar(const char *str, char c);
 
-// TO DO change it in ssize_T
-int		ft_str_idxofchar_from(const char *s, int start, char c);
+ssize_t	ft_str_idxofchar_from(const char *str, int start, char c);
 
 //TO DO cambiargli nome
 int		ft_find_occurrences(char *str, char c, size_t start_index);
