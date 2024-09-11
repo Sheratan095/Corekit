@@ -21,7 +21,7 @@
 #  define BUFFER_SIZE 10
 # endif
 
-//massimo numero di file che possono essere gestiti
+//Maximum number of files that can be managed simultaneously
 # ifndef OPEN_MAX
 #  define OPEN_MAX 2048
 # endif

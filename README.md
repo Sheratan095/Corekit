@@ -30,11 +30,11 @@ _In this example the project structure is:_
 .
 ├── main.c
 ├── makefile
-├── corekit ↓
+├── corekit ▼
 │   ├── Makefile
 │   ├── README.md
-│   ├── includes ↓
-│   └── src ↓
+│   ├── includes ►
+│   └── src ►
 
 ```
 
