@@ -6,13 +6,13 @@
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:49:14 by maceccar          #+#    #+#             */
-/*   Updated: 2024/09/03 18:00:49 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/09/11 16:03:52 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_str_cmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	size_t			i;
 	unsigned char	*s1p;

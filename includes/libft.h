@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/09/09 10:46:39 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/11 16:04:08 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*ft_strrchr(const char *str, int c);
 
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 
-int		ft_str_cmp(const char *s1, const char *s2);
+int		ft_strcmp(const char *s1, const char *s2);
 
 // TO DO change it in ssize_T
 int		ft_str_idxofchar(const char *s, char c);
