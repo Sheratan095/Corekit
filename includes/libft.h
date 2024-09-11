@@ -66,8 +66,7 @@ ssize_t	ft_str_idxofchar(const char *str, char c);
 
 ssize_t	ft_str_idxofchar_from(const char *str, int start, char c);
 
-//TO DO cambiargli nome
-int		ft_find_occurrences(char *str, char c, size_t start_index);
+int		ft_count_occurrences(char *str, char c, size_t start_index);
 
 char	*ft_strconcat(char *s1, char *s2, t_bool free_s1, t_bool free_s2);
 

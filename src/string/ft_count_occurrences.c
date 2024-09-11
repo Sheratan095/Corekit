@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_find_occurrences(char *str, char c, size_t start_index)
+int	ft_count_occurrences(char *str, char c, size_t start_index)
 {
 	int	count;
 	int	i;
