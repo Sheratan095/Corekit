@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_end_with.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/09/11 16:18:29 by maceccar         ###   ########.fr       */
+/*   Created: 2024/09/17 18:55:06 by maceccar          #+#    #+#             */
+/*   Updated: 2024/09/17 18:55:06 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "corekit.h"
 
-int	ft_isprint(int c)
+t_bool	ft_str_start_with(char *str, char c)
 {
-	if (31 < c && c < 127)
-		return (1);
-	return (0);
+	if (!str)
+		return (false);
+	if (str[0] == c)
+		return (true);
+	return (false);
 }

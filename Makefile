@@ -56,6 +56,8 @@ SRC = ./src/char/ft_tolower.c \
 	./src/string/ft_str_skip_spaces.c \
 	./src/string/ft_str_idxofchar.c \
 	./src/string/ft_strconcat.c \
+	./src/string/ft_str_end_with.c \
+	./src/string/ft_str_start_with.c \
 	./src/output/ft_putchar_fd.c \
 	./src/output/ft_putendl_fd.c \
 	./src/output/ft_putnbr_fd.c \
