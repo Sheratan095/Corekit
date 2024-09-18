@@ -6,7 +6,7 @@
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/09/11 16:18:28 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/09/17 18:55:09 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,10 @@ void	ft_print_char_matrix(const char **matrix);
 size_t	ft_count_matrix_row(const void **matrix);
 
 void	ft_free_matrix(void **matrix);
+
+char	**ft_matrix_add_front(char **matrix, char *str, t_bool free_mtx);
+
+char	**ft_matrix_add_back(char **matrix, char *str, t_bool free_mtx);
 
 //TIME
 

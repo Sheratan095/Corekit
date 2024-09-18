@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_duplicate_char_matrix.c                         :+:      :+:    :+:   */
+/*   ft_matrix_add_front.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/09/17 18:55:09 by maceccar         ###   ########.fr       */
+/*   Created: 2024/09/18 17:10:55 by maceccar          #+#    #+#             */
+/*   Updated: 2024/09/18 17:10:55 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corekit.h"
 
-char	**ft_duplicate_char_matrix(const char **matrix)
+char	**ft_matrix_add_front(char **matrix, char *str, t_bool free_mtx)
 {
-	int		count_rows;
-	int		str_len;
-	char	**result;
 	int		i;
+	int		j;
+	int		new_len;
+	char	**new_matrix;
 
-	count_rows = ft_count_matrix_row((const void **) matrix);
-	result = malloc(sizeof(char *) * (count_rows + 1));
-	if (!result)
-		return (NULL);
 	i = 0;
-	while (matrix[i])
+	j = 0;
+	new_len = ft_count_matrix_row((const void **)matrix);
+	if (str)
+		new_len += 1;
+	new_matrix = ft_calloc(sizeof(char *), new_len + 1);
+	if (str)
+		new_matrix[j++] = ft_strdup(str);
+	if (matrix)
 	{
-		str_len = ft_strlen(matrix[i]);
-		result[i] = ft_calloc(str_len + 1, sizeof(char));
-		ft_strlcpy(result[i], matrix[i], str_len + 1);
-		i++;
+		while (matrix[i])
+			new_matrix[j++] = ft_strdup(matrix[i++]);
+		if (free_mtx)
+			ft_free_matrix((void **)matrix);
 	}
-	result[i] = NULL;
-	return (result);
+	return (new_matrix);
 }
