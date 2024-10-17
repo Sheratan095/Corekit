@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   corekit.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
+/*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/10/16 18:15:13 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/10/17 17:48:30 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char	**ft_matrix_add_front(char **matrix, char *str, t_bool free_mtx);
 char	**ft_matrix_add_back(char **matrix, char *str, t_bool free_mtx);
 
 char	**ft_matrix_remove_at(char **matrix, size_t index, t_bool free_matrix);
+
+ssize_t	ft_matrix_index_of(char **matrix, char *target);
 
 //TIME
 

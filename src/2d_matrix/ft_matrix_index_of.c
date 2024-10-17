@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_matrix.c                                   :+:      :+:    :+:   */
+/*   ft_matrix_index_of.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
+/*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/10/17 15:35:45 by maceccar         ###   ########.fr       */
+/*   Created: 2024/10/17 17:45:57 by maceccar          #+#    #+#             */
+/*   Updated: 2024/10/17 18:00:03 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corekit.h"
 
-void	ft_free_matrix(void **matrix)
+ssize_t	ft_matrix_index_of(char **matrix, char *target)
 {
 	int	i;
 
-	if (!matrix)
-		return ;
+	if (ft_count_matrix_row((const void **)matrix) == 0 || !target)
+		return (-1);
 	i = 0;
 	while (matrix[i])
 	{
-		free(matrix[i]);
+		if (ft_strlen(matrix[i]) == ft_strlen(target))
+		{
+			if (ft_strcmp(matrix[i], target) == 0)
+				return (i);
+		}
 		i++;
 	}
-	free(matrix);
+	return (-1);
 }
