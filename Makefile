@@ -75,6 +75,7 @@ SRC = ./src/char/ft_tolower.c \
 	./src/2d_matrix/ft_free_matrix.c \
 	./src/2d_matrix/ft_matrix_add_front.c \
 	./src/2d_matrix/ft_matrix_add_back.c \
+	./src/2d_matrix/ft_matrix_remove_at.c \
 	./src/int/ft_get_absolute.c \
 	./src/time/ft_get_current_time.c \
 
