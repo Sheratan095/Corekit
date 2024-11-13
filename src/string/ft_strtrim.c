@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
+/*   By: maceccar <maceccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
-/*   Updated: 2024/10/17 15:35:45 by maceccar         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:20:14 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_contains_char(const char *str, char c)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char *s1, char const *set, t_bool free_src)
 {
 	char	*result;
 	int		start_inx;
@@ -48,5 +48,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (start_inx < end_idx)
 		result[i++] = s1[start_inx++];
 	result[i] = '\0';
+	if (free_src)
+		free(s1);
 	return (result);
 }
