@@ -110,6 +110,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 t_bool	ft_str_end_with(char *str, char c);
 
+t_bool	ft_str_end_with_str(const char *str, char *end);
+
 t_bool	ft_str_start_with(char *str, char c);
 
 //CONVERSIONS

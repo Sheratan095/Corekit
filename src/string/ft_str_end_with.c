@@ -25,3 +25,24 @@ t_bool	ft_str_end_with(char *str, char c)
 		return (true);
 	return (false);
 }
+
+t_bool	ft_str_end_with_str(const char *str, char *end)
+{
+	int	s_idx;
+	int	end_idx;
+
+	if (!str)
+		return (false);
+	if (!end)
+		return (true);
+	end_idx = ft_strlen(end);
+	s_idx = ft_strlen(str);
+	while (s_idx >= 0 && end_idx >= 0 && str[s_idx] == end[end_idx])
+	{
+		s_idx--;
+		end_idx--;
+	}
+	if (end_idx < 0)
+		return (true);
+	return (false);
+}
