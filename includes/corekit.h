@@ -18,6 +18,9 @@
 # include <stdarg.h>
 # include <limits.h>
 # include <sys/time.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 
 # include "stack.h"
 # include "libft.h"
@@ -66,5 +69,9 @@ ssize_t	ft_matrix_index_of(char **matrix, char *target);
 //TIME
 
 size_t	ft_get_current_time(void);
+
+//FILES
+
+t_bool	ft_file_is_dir(char *file);
 
 #endif

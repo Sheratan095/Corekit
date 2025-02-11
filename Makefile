@@ -79,6 +79,7 @@ SRC = ./src/char/ft_tolower.c \
 	./src/2d_matrix/ft_matrix_index_of.c \
 	./src/int/ft_get_absolute.c \
 	./src/time/ft_get_current_time.c \
+	./src/files/ft_file_is_dir.c \
 
 SRC_STACK = ./src/int_stack/ft_initialize_stack.c \
 			./src/int_stack/ft_create_node.c \
