@@ -124,6 +124,8 @@ long	ft_atol(const char *s);
 
 char	*ft_strdup(char *src);
 
+int		ft_rgb_to_int(int red, int green, int blue);
+
 //OUTPUT
 
 void	ft_putchar_fd(char c, int fd);

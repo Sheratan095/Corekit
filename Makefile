@@ -17,6 +17,7 @@ SRC = ./src/char/ft_tolower.c \
 	./src/conversions/ft_atoi.c \
 	./src/conversions/ft_atol.c \
 	./src/conversions/ft_itoa.c \
+	./src/conversions/ft_rbg_to_int.c \
 	./src/list/ft_lstadd_back.c \
 	./src/list/ft_lstadd_front.c \
 	./src/list/ft_lstclear.c \
