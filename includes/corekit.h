@@ -44,6 +44,8 @@ t_bool	ft_is_string_numeric(const char *str);
 
 t_bool	ft_is_string_empty(char	*string);
 
+t_bool	ft_str_only_contains(char *str, char *charset);
+
 void	ft_str_skip_spaces(char *string, int *i);
 
 int		ft_get_absolute(int number);
