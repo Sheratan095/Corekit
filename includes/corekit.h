@@ -48,6 +48,8 @@ t_bool	ft_str_only_contains(char *str, char *charset);
 
 void	ft_str_skip_spaces(char *string, int *i);
 
+char	*ft_pad_string(char *src, char padding_char, int padding_nbr);
+
 int		ft_get_absolute(int number);
 
 //MATIRX
