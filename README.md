@@ -75,6 +75,6 @@ The library (.a file) is called libcorekit.a beacause all the library during com
 # TABLE OF CONTENT
 
 - [Usage](#usage)
-- [Makefile explanation](#makefile-explanation)
+- [Make explanation](#makefile-explanation)
 - [TABLE OF CONTENT](#table-of-content)
 
