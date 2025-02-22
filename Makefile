@@ -1,7 +1,6 @@
 NAME = libcorekit.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
-# CFLAGS = -g
 COMPILE = $(CC) $(CFLAGS)
 ARCHIVE = ar rc $(NAME)
 REMOVE = rm -f
