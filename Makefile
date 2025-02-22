@@ -66,6 +66,7 @@ SRC = ./src/char/ft_tolower.c \
 	./src/output/ft_putendl_fd.c \
 	./src/output/ft_putnbr_fd.c \
 	./src/output/ft_putstr_fd.c \
+	./src/output/ft_printf.c \
 	./src/types/ft_isalnum.c \
 	./src/types/ft_isalpha.c \
 	./src/types/ft_isascii.c \
@@ -100,9 +101,8 @@ SRC_STACK = ./src/int_stack/ft_initialize_stack.c \
 			./src/int_stack/ft_get_max_value.c \
 			./src/int_stack/ft_is_stack_ordered.c \
 
-
-SRC_PRINTF = ./src/ft_printf/ft_is_in.c \
-			./src/ft_printf/ft_printf.c \
+SRC_PRINTF = ./src/ft_printf/universal_print.c \
+			./src/ft_printf/ft_is_in.c \
 			./src/ft_printf/ft_putbase.c \
 			./src/ft_printf/ft_putchar.c \
 			./src/ft_printf/ft_putnbr.c \

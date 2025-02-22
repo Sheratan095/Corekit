@@ -43,17 +43,15 @@ static int	print_format(char format, va_list ap, int *is_spec)
 	return (0);
 }
 
-int	ft_printf(const char *format, ...)
+int	universal_print(const char *format, va_list ap)
 {
 	int		i;
 	int		inside_specifier;
 	int		*ptr;
-	va_list	ap;
 
 	i = 0;
 	inside_specifier = 0;
 	ptr = &inside_specifier;
-	va_start(ap, format);
 	while (*format)
 	{
 		if (inside_specifier == 0 && *format == '%')
