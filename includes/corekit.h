@@ -24,6 +24,7 @@
 
 # include "stack.h"
 # include "libft.h"
+# include "ft_printf.h"
 
 typedef enum e_bool
 {
@@ -31,12 +32,8 @@ typedef enum e_bool
 	true
 }	t_bool;
 
-//Not including ft_printf.h and get_next_line.h because i don't want to
+//Not including get_next_line.h because i don't want to
 //	inlcude also their help functions, so i just use their prototype
-
-int		universal_print(int fd, const char *format, va_list ap);
-
-int		ft_printf(const char *format, ...);
 
 char	*get_next_line(int fd, t_bool last_call);
 

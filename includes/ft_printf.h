@@ -15,6 +15,10 @@
 
 # include "corekit.h"
 
+int		universal_print(int fd, const char *format, va_list ap);
+
+int		ft_printf(const char *format, ...);
+
 int		ft_putbase(unsigned int nb, char *base, int fd);
 
 int		ft_unsignedputnbr(int n, int fd);

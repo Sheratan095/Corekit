@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_is_in.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maceccar <maceccar@student.42firenze.it>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/22 11:17:48 by maceccar          #+#    #+#             */
-/*   Updated: 2025/02/22 11:17:48 by maceccar         ###   ########.fr       */
+/*   Created: 2024/02/16 18:40:17 by maceccar          #+#    #+#             */
+/*   Updated: 2024/10/17 15:35:45 by maceccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *format, ...)
+int	ft_is_in(char c, const char *ptr)
 {
-	int		result;
-	va_list	ap;
+	int	i;
 
-	va_start(ap, format);
-	result = universal_print(1, format, ap);
-	va_end(ap);
-	return (result);
+	i = 0;
+	while (ptr[i])
+	{
+		if (ptr[i] == (unsigned char)c)
+		{
+			return (i + 1);
+		}
+		i++;
+	}
+	return (0);
 }
