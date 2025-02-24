@@ -18,7 +18,7 @@ int	ft_printf(const char *format, ...)
 	va_list	ap;
 
 	va_start(ap, format);
-	result = universal_print(format, ap);
+	result = universal_print(1, format, ap);
 	va_end(ap);
 	return (result);
 }

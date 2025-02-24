@@ -43,7 +43,7 @@ static int	print_format(char format, va_list ap, int *is_spec)
 	return (0);
 }
 
-int	universal_print(const char *format, va_list ap)
+int	universal_print(int fd, const char *format, va_list ap)
 {
 	int		i;
 	int		inside_specifier;
@@ -59,7 +59,7 @@ int	universal_print(const char *format, va_list ap)
 		else if (inside_specifier == 1)
 			i += print_format(*format, ap, ptr);
 		else
-			i += ft_putchar(*format);
+			i += ft_putchar_fd(*format, fd);
 		format++;
 	}
 	return (i);

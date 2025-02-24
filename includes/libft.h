@@ -128,9 +128,9 @@ int		ft_rgb_to_int(int red, int green, int blue);
 
 //OUTPUT
 
-void	ft_putchar_fd(char c, int fd);
+int		ft_putchar_fd(char c, int fd);
 
-void	ft_putstr_fd(char *s, int fd);
+int		ft_putstr_fd(char *s, int fd);
 
 void	ft_putendl_fd(char *s, int fd);
 
