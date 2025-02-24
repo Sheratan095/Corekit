@@ -41,7 +41,7 @@ int	universal_print(int fd, const char *format, va_list ap)
 
 static int	print_format(char format, va_list ap, int *is_spec, int fd)
 {
-	if (ft_is_in(format, "csdiupxX%"))
+	if (ft_strchr("csdiupxX%", format))
 	{
 		*is_spec = 0;
 		return (handle_specifier(format, ap, fd), fd);

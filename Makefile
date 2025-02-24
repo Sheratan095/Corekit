@@ -102,7 +102,6 @@ SRC_STACK = ./src/int_stack/ft_initialize_stack.c \
 			./src/int_stack/ft_is_stack_ordered.c \
 
 SRC_PRINTF = ./src/ft_printf/universal_print.c \
-			./src/ft_printf/ft_is_in.c \
 			./src/ft_printf/ft_putbase.c \
 			./src/ft_printf/ft_unsignedputnbr.c
 
