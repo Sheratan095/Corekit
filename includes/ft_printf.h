@@ -15,17 +15,7 @@
 
 # include "corekit.h"
 
-int		ft_putptr(unsigned long lnb, char *base, int fd);
-
 int		ft_is_in(char c, const char *ptr);
-
-int		ft_putchar(char c);
-
-int		ft_putstr(const char *str);
-
-int		ft_putnbr(long int nb);
-
-int		ft_printf(const char	*format, ...);
 
 int		ft_putbase(unsigned int nb, char *base, int fd);
 

@@ -20,8 +20,8 @@ int	ft_putptr(unsigned long lnb, char *base, int fd)
 
 	i = 0;
 	if (!lnb || fd < 0)
-		return (ft_putstr("(nil)"));
-	i += ft_putstr("0x");
+		return (ft_putstr_fd("(nil)", fd));
+	i += ft_putstr_fd("0x", fd);
 	if (lnb > 15)
 	{
 		i += putptr(lnb / 16, base, fd);

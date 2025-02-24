@@ -136,6 +136,8 @@ int		ft_putendl_fd(char *s, int fd);
 
 int		ft_putnbr_fd(int n, int fd);
 
+int		ft_putptr(unsigned long lnb, char *base, int fd);
+
 //LISTS
 
 t_list	*ft_lstnew(void *content);
