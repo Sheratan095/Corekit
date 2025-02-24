@@ -58,7 +58,7 @@ char	*read_line(int fd, char *reminder)
 	if (!buffer)
 		return (NULL);
 	read_bytes = 1;
-	while (!ft_strchr_gnl(reminder, '\n') && read_bytes != 0)
+	while (!ft_strchr(reminder, '\n') && read_bytes != 0)
 	{
 		read_bytes = read(fd, buffer, BUFFER_SIZE);
 		if (read_bytes < 0)
@@ -68,7 +68,7 @@ char	*read_line(int fd, char *reminder)
 			return (NULL);
 		}
 		buffer[read_bytes] = '\0';
-		reminder = ft_strjoin_free_s1_gnl(reminder, buffer);
+		reminder = ft_strjoin_free_s1(reminder, buffer);
 		if (!reminder)
 			return (free(buffer), NULL);
 	}
@@ -128,7 +128,7 @@ char	*format_new_reminder(char *reminder)
 		free(reminder);
 		return (NULL);
 	}
-	result = (char *)malloc(sizeof(char) * (ft_strlen_gnl(reminder) - i + 1));
+	result = (char *)malloc(sizeof(char) * (ft_strlen(reminder) - i + 1));
 	if (!result)
 		return (NULL);
 	i++;

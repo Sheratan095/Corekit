@@ -106,7 +106,6 @@ SRC_PRINTF = ./src/ft_printf/universal_print.c \
 			./src/ft_printf/ft_unsignedputnbr.c
 
 SRC_GET_NEXT_LINE = ./src/get_next_line/get_next_line_bonus.c \
-				./src/get_next_line/get_next_line_utils_bonus.c
 
 OBJ = ${SRC:.c=.o} ${SRC_PRINTF:.c=.o} ${SRC_GET_NEXT_LINE:.c=.o} ${SRC_STACK:.c=.o}
 
