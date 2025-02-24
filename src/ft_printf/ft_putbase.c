@@ -12,24 +12,24 @@
 
 #include "ft_printf.h"
 
-static int	put16(unsigned int lnb, char *base)
+static int	put16(unsigned int lnb, char *base, int fd)
 {
 	int	i;
 
 	i = 0;
 	if (lnb > 15)
 	{
-		i += put16(lnb / 16, base);
+		i += put16(lnb / 16, base, fd);
 		lnb %= 16;
 	}
 	if (lnb < 16)
 	{
-		i += ft_putchar(base[lnb]);
+		i += ft_putchar_fd(base[lnb], fd);
 	}
 	return (i);
 }
 
-int	ft_putbase(unsigned int nb, char *base)
+int	ft_putbase(unsigned int nb, char *base, int fd)
 {
 	long	lnb;
 	int		i;
@@ -38,12 +38,12 @@ int	ft_putbase(unsigned int nb, char *base)
 	lnb = nb;
 	if (lnb > 15)
 	{
-		i += put16(lnb / 16, base);
+		i += put16(lnb / 16, base, fd);
 		lnb %= 16;
 	}
 	if (lnb < 16)
 	{
-		i += ft_putchar(base[lnb]);
+		i += ft_putchar_fd(base[lnb], fd);
 	}
 	return (i);
 }

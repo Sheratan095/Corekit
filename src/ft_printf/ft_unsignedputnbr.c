@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_unsignedputnbr(int n)
+int	ft_unsignedputnbr(int n, int fd)
 {
 	long	ln;
 
@@ -22,5 +22,5 @@ int	ft_unsignedputnbr(int n)
 		ln = -ln;
 		ln = 4294967296 - ln;
 	}
-	return (ft_putnbr(ln));
+	return (ft_putnbr_fd(ln, fd));
 }
